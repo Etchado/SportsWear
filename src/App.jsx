@@ -1,8 +1,22 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
+
+// Providers
+import { ThemeProvider }    from '@/context/ThemeContext'
+import { ToastProvider }    from '@/context/ToastContext'
+import { CurrencyProvider } from '@/context/CurrencyContext'
+import { AuthProvider }     from '@/context/AuthContext'
+import { CartProvider }     from '@/context/CartContext'
+import { WishlistProvider } from '@/context/WishlistContext'
+import { CompareProvider }  from '@/context/CompareContext'
+import { FilterProvider }   from '@/context/FilterContext'
+import { LoyaltyProvider }  from '@/context/LoyaltyContext'
+import { ProductsProvider } from '@/context/ProductsContext'
+
+// Eager page
 import HomePage from '@/pages/HomePage'
 
-// Lazy-loaded pages
+// Lazy pages
 const ShopPage          = lazy(() => import('@/pages/ShopPage'))
 const MenPage           = lazy(() => import('@/pages/MenPage'))
 const WomenPage         = lazy(() => import('@/pages/WomenPage'))
@@ -24,36 +38,65 @@ const NotFoundPage      = lazy(() => import('@/pages/NotFoundPage'))
 function PageLoader() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-light-bg dark:bg-dark-bg">
-      <div className="w-10 h-10 border-4 border-brand-pink border-t-transparent rounded-full animate-spin" />
+      <div
+        className="w-10 h-10 border-4 border-t-transparent rounded-full animate-spin"
+        style={{ borderColor: '#FF2D78', borderTopColor: 'transparent' }}
+      />
     </div>
+  )
+}
+
+function AppRoutes() {
+  return (
+    <Suspense fallback={<PageLoader />}>
+      <Routes>
+        <Route path="/"               element={<HomePage />} />
+        <Route path="/shop"           element={<ShopPage />} />
+        <Route path="/men"            element={<MenPage />} />
+        <Route path="/women"          element={<WomenPage />} />
+        <Route path="/kids"           element={<KidsPage />} />
+        <Route path="/sport/:category" element={<SportPage />} />
+        <Route path="/brand/:name"    element={<BrandPage />} />
+        <Route path="/product/:id"    element={<ProductPage />} />
+        <Route path="/outfit-builder" element={<OutfitBuilderPage />} />
+        <Route path="/drops"          element={<DropsPage />} />
+        <Route path="/wishlist"       element={<WishlistPage />} />
+        <Route path="/checkout"       element={<CheckoutPage />} />
+        <Route path="/account/*"      element={<AccountPage />} />
+        <Route path="/size-guide"     element={<SizeGuidePage />} />
+        <Route path="/about"          element={<AboutPage />} />
+        <Route path="/support/*"      element={<SupportPage />} />
+        <Route path="/admin"          element={<AdminPage />} />
+        <Route path="*"               element={<NotFoundPage />} />
+      </Routes>
+    </Suspense>
   )
 }
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/"                  element={<HomePage />} />
-          <Route path="/shop"              element={<ShopPage />} />
-          <Route path="/men"               element={<MenPage />} />
-          <Route path="/women"             element={<WomenPage />} />
-          <Route path="/kids"              element={<KidsPage />} />
-          <Route path="/sport/:category"   element={<SportPage />} />
-          <Route path="/brand/:name"       element={<BrandPage />} />
-          <Route path="/product/:id"       element={<ProductPage />} />
-          <Route path="/outfit-builder"    element={<OutfitBuilderPage />} />
-          <Route path="/drops"             element={<DropsPage />} />
-          <Route path="/wishlist"          element={<WishlistPage />} />
-          <Route path="/checkout"          element={<CheckoutPage />} />
-          <Route path="/account"           element={<AccountPage />} />
-          <Route path="/size-guide"        element={<SizeGuidePage />} />
-          <Route path="/about"             element={<AboutPage />} />
-          <Route path="/support/*"         element={<SupportPage />} />
-          <Route path="/admin"             element={<AdminPage />} />
-          <Route path="*"                  element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <ThemeProvider>
+      <ToastProvider>
+        <CurrencyProvider>
+          <AuthProvider>
+            <CartProvider>
+              <WishlistProvider>
+                <CompareProvider>
+                  <FilterProvider>
+                    <LoyaltyProvider>
+                      <ProductsProvider>
+                        <BrowserRouter>
+                          <AppRoutes />
+                        </BrowserRouter>
+                      </ProductsProvider>
+                    </LoyaltyProvider>
+                  </FilterProvider>
+                </CompareProvider>
+              </WishlistProvider>
+            </CartProvider>
+          </AuthProvider>
+        </CurrencyProvider>
+      </ToastProvider>
+    </ThemeProvider>
   )
 }
