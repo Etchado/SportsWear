@@ -145,7 +145,10 @@
     "available": "Available Now",
     "coming_soon": "Coming Soon",
     "units_left": "{{count}} units left",
-    "enter_raffle": "Enter Raffle"
+    "enter_raffle": "Enter Raffle",
+    "raffle_entered": "You're in the raffle!",
+    "raffle_confirmed": "You're in!",
+    "raffle_notice": "Winners notified by email. Free to enter."
   },
   "outfit_builder": {
     "title": "Outfit Builder",

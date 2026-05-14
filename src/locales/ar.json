@@ -145,7 +145,10 @@
     "available": "متاح الآن",
     "coming_soon": "قريباً",
     "units_left": "{{count}} وحدة متبقية",
-    "enter_raffle": "الاشتراك في السحب"
+    "enter_raffle": "الاشتراك في السحب",
+    "raffle_entered": "تم تسجيلك في السحب!",
+    "raffle_confirmed": "أنت مسجل!",
+    "raffle_notice": "يُعلن الفائزون عبر البريد الإلكتروني. الاشتراك مجاني."
   },
   "outfit_builder": {
     "title": "منشئ الإطلالة",
