@@ -31,9 +31,9 @@
     @apply border-dark-border;
   }
 
-  /* RTL support */
+  /* RTL — use Cairo for Arabic text */
   [dir='rtl'] {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Cairo', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }
 

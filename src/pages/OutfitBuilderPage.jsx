@@ -457,7 +457,7 @@ export default function OutfitBuilderPage() {
           <p className="text-xs font-black uppercase tracking-widest text-light-muted dark:text-dark-muted mb-3">
             {t('outfit_builder.choose_sport')}
           </p>
-          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             {SPORT_OPTIONS.map(s => (
               <SportPill key={s} label={s} active={sport === s} onClick={() => setSport(s)} />
             ))}

@@ -4,6 +4,7 @@ import { motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { useCart }     from '@/context/CartContext'
 import { useWishlist } from '@/context/WishlistContext'
+import { useCompare }  from '@/context/CompareContext'
 import { useCurrency } from '@/context/CurrencyContext'
 import { useToast }    from '@/context/ToastContext'
 import { handleImgError } from '@/lib/imgFallback'
@@ -13,12 +14,14 @@ export default function ProductCard({ product }) {
   const { t } = useTranslation()
   const { addItem }      = useCart()
   const { toggle, isWishlisted } = useWishlist()
+  const { toggle: toggleCompare, isComparing, isFull } = useCompare()
   const { format }       = useCurrency()
-  const { success }      = useToast()
+  const { success, info } = useToast()
 
   const [activeColor, setActiveColor] = useState(0)
 
   const wishlisted = isWishlisted(product.id)
+  const comparing  = isComparing(product.id)
   const discount = product.old_price
     ? Math.round((1 - product.price / product.old_price) * 100)
     : null
@@ -34,6 +37,12 @@ export default function ProductCard({ product }) {
   function handleWishlist(e) {
     e.preventDefault()
     toggle(product.id)
+  }
+
+  function handleCompare(e) {
+    e.preventDefault()
+    if (isFull && !comparing) { info(t('compare.full')); return }
+    toggleCompare(product)
   }
 
   return (
@@ -59,21 +68,38 @@ export default function ProductCard({ product }) {
             {discount && <Badge label={`-${discount}%`} className="!bg-[#FF2D78] !text-white" />}
           </div>
 
-          {/* Wishlist button */}
-          <button
-            onClick={handleWishlist}
-            className="absolute top-2 end-2 p-2 rounded-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm transition-all hover:scale-110"
-            aria-label={t('product.add_to_wishlist')}
-          >
-            <svg
-              className="w-4 h-4 transition-colors"
-              fill={wishlisted ? '#FF2D78' : 'none'}
-              stroke={wishlisted ? '#FF2D78' : 'currentColor'}
-              viewBox="0 0 24 24"
+          {/* Wishlist + Compare buttons */}
+          <div className="absolute top-2 end-2 flex flex-col gap-1">
+            <button
+              onClick={handleWishlist}
+              className="p-2 rounded-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm transition-all hover:scale-110"
+              aria-label={t('product.add_to_wishlist')}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-          </button>
+              <svg
+                className="w-4 h-4 transition-colors"
+                fill={wishlisted ? '#FF2D78' : 'none'}
+                stroke={wishlisted ? '#FF2D78' : 'currentColor'}
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button
+              onClick={handleCompare}
+              className="p-2 rounded-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm transition-all hover:scale-110 opacity-0 group-hover:opacity-100"
+              aria-label={t(comparing ? 'compare.added' : 'compare.add')}
+              title={t(comparing ? 'compare.added' : 'compare.add')}
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke={comparing ? '#0066FF' : 'currentColor'}
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </button>
+          </div>
 
           {/* Quick add — appears on hover */}
           <div className="absolute bottom-0 inset-x-0 translate-y-full group-hover:translate-y-0 transition-transform duration-200">

@@ -1,7 +1,10 @@
-import Navbar    from './Navbar'
-import Footer    from './Footer'
-import BottomNav from './BottomNav'
-import CartDrawer from './CartDrawer'
+import Navbar          from './Navbar'
+import Footer          from './Footer'
+import BottomNav       from './BottomNav'
+import CartDrawer      from './CartDrawer'
+import CompareBar      from './CompareBar'
+import CookieBanner    from './CookieBanner'
+import BackToTopButton from './BackToTopButton'
 
 export default function Layout({ children, hideFooter = false }) {
   return (
@@ -13,6 +16,9 @@ export default function Layout({ children, hideFooter = false }) {
       {!hideFooter && <Footer />}
       <BottomNav />
       <CartDrawer />
+      <CompareBar />
+      <CookieBanner />
+      <BackToTopButton />
     </div>
   )
 }

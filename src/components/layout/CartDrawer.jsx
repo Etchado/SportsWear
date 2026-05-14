@@ -102,7 +102,7 @@ export default function CartDrawer() {
               <div>
                 <h2 className="font-black text-lg">{t('cart.title')}</h2>
                 {totalItems > 0 && (
-                  <p className="text-xs text-light-muted dark:text-dark-muted">{totalItems} {totalItems === 1 ? 'item' : 'items'}</p>
+                  <p className="text-xs text-light-muted dark:text-dark-muted">{t('common.results', { count: totalItems })}</p>
                 )}
               </div>
               <button

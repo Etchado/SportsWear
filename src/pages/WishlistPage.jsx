@@ -32,7 +32,7 @@ export default function WishlistPage() {
           <p className="text-6xl mb-4">❤️</p>
           <p className="text-xl font-black text-light-text dark:text-dark-text mb-2">{t('wishlist.empty')}</p>
           <p className="text-sm text-light-muted dark:text-dark-muted mb-8">
-            Save products you love and come back to them later.
+            {t('wishlist.empty')}
           </p>
           <Link
             to="/shop"
