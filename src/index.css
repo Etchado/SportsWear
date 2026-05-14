@@ -50,4 +50,17 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* iOS safe-area padding for bottom nav */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Respect reduced-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }

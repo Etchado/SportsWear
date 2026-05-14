@@ -16,13 +16,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    chunkSizeWarningLimit: 600,
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
+          vendor:   ['react', 'react-dom', 'react-router-dom'],
           supabase: ['@supabase/supabase-js'],
-          motion: ['motion'],
-          i18n: ['i18next', 'react-i18next'],
+          motion:   ['motion'],
+          i18n:     ['i18next', 'react-i18next'],
+          zod:      ['zod'],
         },
       },
     },

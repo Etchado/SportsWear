@@ -39,6 +39,7 @@ export default function HeroBanner() {
           alt="Hero"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-e from-black/70 via-black/40 to-transparent" />
       </div>

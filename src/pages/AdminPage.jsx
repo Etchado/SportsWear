@@ -276,7 +276,7 @@ function ReviewsTab() {
           {/* Product thumb */}
           {review.products?.images?.[0] && (
             <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 bg-zinc-200 dark:bg-zinc-700">
-              <img src={review.products.images[0]} alt="" onError={handleImgError} className="w-full h-full object-cover" />
+              <img src={review.products.images[0]} alt="" onError={handleImgError} loading="lazy" className="w-full h-full object-cover" />
             </div>
           )}
 
@@ -367,7 +367,7 @@ function ProductsTab() {
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0 bg-zinc-200 dark:bg-zinc-700">
-                        <img src={p.images?.[0]} alt="" onError={handleImgError} className="w-full h-full object-cover" />
+                        <img src={p.images?.[0]} alt="" onError={handleImgError} loading="lazy" className="w-full h-full object-cover" />
                       </div>
                       <span className="font-semibold text-light-text dark:text-dark-text line-clamp-1 max-w-[180px]">{p.title}</span>
                     </div>
