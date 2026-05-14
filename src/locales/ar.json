@@ -126,7 +126,12 @@
     "tier_silver": "فضي",
     "tier_gold": "ذهبي",
     "tier_platinum": "بلاتيني",
-    "points_to_next": "{{count}} نقطة للوصول إلى {{tier}}"
+    "points_to_next": "{{count}} نقطة للوصول إلى {{tier}}",
+    "overview": "نظرة عامة",
+    "profile": "الملف الشخصي",
+    "welcome_back": "مرحباً بعودتك",
+    "profile_saved": "تم حفظ الملف الشخصي",
+    "loyalty": "نقاط الولاء"
   },
   "drops": {
     "title": "إطلاقات محدودة",

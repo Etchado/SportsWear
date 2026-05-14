@@ -126,7 +126,12 @@
     "tier_silver": "Silver",
     "tier_gold": "Gold",
     "tier_platinum": "Platinum",
-    "points_to_next": "{{count}} points to {{tier}}"
+    "points_to_next": "{{count}} points to {{tier}}",
+    "overview": "Overview",
+    "profile": "Profile",
+    "welcome_back": "Welcome back",
+    "profile_saved": "Profile saved successfully",
+    "loyalty": "Loyalty Points"
   },
   "drops": {
     "title": "Limited Drops",
