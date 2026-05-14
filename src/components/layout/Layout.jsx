@@ -5,6 +5,7 @@ import CartDrawer      from './CartDrawer'
 import CompareBar      from './CompareBar'
 import CookieBanner    from './CookieBanner'
 import BackToTopButton from './BackToTopButton'
+import WhatsAppButton  from './WhatsAppButton'
 
 export default function Layout({ children, hideFooter = false }) {
   return (
@@ -19,6 +20,7 @@ export default function Layout({ children, hideFooter = false }) {
       <CompareBar />
       <CookieBanner />
       <BackToTopButton />
+      <WhatsAppButton />
     </div>
   )
 }

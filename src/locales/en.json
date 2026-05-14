@@ -263,6 +263,10 @@
     "update_status": "Update Status",
     "delete_review": "Delete Review"
   },
+  "whatsapp": {
+    "tooltip": "Chat with us on WhatsApp",
+    "message": "Hello! I need help with my order."
+  },
   "brands": {
     "nike": "Nike",
     "adidas": "Adidas",
