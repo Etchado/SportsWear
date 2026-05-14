@@ -10,7 +10,9 @@
     "wishlist": "Wishlist",
     "account": "Account",
     "cart": "Cart",
-    "search": "Search"
+    "search": "Search",
+    "home": "Home",
+    "search_placeholder": "Search products, brands..."
   },
   "home": {
     "hero_title": "Play Hard. Look Harder.",
@@ -36,7 +38,19 @@
     "recently_viewed": "Recently Viewed",
     "share": "Share",
     "write_review": "Write a Review",
-    "zoom": "Zoom"
+    "zoom": "Zoom",
+    "color": "Color",
+    "specs": "Specifications",
+    "you_may_like": "You May Also Like",
+    "your_rating": "Your Rating",
+    "review_placeholder": "Share your thoughts about this product...",
+    "submit_review": "Submit Review",
+    "review_submitted": "Review submitted, thank you!",
+    "no_reviews": "No reviews yet. Be the first!",
+    "anonymous": "Anonymous",
+    "select_size_error": "Please select a size to continue",
+    "easy_returns": "Easy Returns",
+    "secure_payment": "Secure Payment"
   },
   "cart": {
     "title": "Your Cart",
@@ -49,7 +63,8 @@
     "remove": "Remove",
     "free_shipping": "Free shipping on orders over {{amount}}",
     "coupon_placeholder": "Enter coupon code",
-    "apply": "Apply"
+    "apply": "Apply",
+    "added": "Added to Cart"
   },
   "checkout": {
     "step_cart": "Cart Review",
@@ -79,7 +94,8 @@
     "continue_apple": "Continue with Apple",
     "no_account": "Don't have an account?",
     "have_account": "Already have an account?",
-    "display_name": "Display Name"
+    "display_name": "Display Name",
+    "login_required": "Please sign in to continue"
   },
   "account": {
     "title": "My Account",
@@ -151,7 +167,22 @@
     "redeem_info": "100 points = 10 SAR discount",
     "history": "Points History",
     "earned": "Earned",
-    "redeemed": "Redeemed"
+    "redeemed": "Redeemed",
+    "earn_points": "Earn {{points}} pts with this purchase"
+  },
+  "wishlist": {
+    "title": "Wishlist",
+    "empty": "Your wishlist is empty",
+    "save": "Save to Wishlist",
+    "saved": "Saved",
+    "remove": "Remove"
+  },
+  "compare": {
+    "title": "Compare",
+    "add": "Add to Compare",
+    "added": "In Compare",
+    "full": "Can only compare up to 3 products",
+    "clear": "Clear All"
   },
   "common": {
     "loading": "Loading...",

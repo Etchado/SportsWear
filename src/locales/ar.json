@@ -10,7 +10,9 @@
     "wishlist": "المفضلة",
     "account": "حسابي",
     "cart": "السلة",
-    "search": "بحث"
+    "search": "بحث",
+    "home": "الرئيسية",
+    "search_placeholder": "ابحث عن منتجات، ماركات..."
   },
   "home": {
     "hero_title": "العب بجدية. وابدُ أكثر جدية.",
@@ -36,7 +38,19 @@
     "recently_viewed": "شاهدته مؤخراً",
     "share": "مشاركة",
     "write_review": "اكتب تقييماً",
-    "zoom": "تكبير"
+    "zoom": "تكبير",
+    "color": "اللون",
+    "specs": "المواصفات",
+    "you_may_like": "قد يعجبك أيضاً",
+    "your_rating": "تقييمك",
+    "review_placeholder": "شاركنا رأيك في هذا المنتج...",
+    "submit_review": "إرسال التقييم",
+    "review_submitted": "تم إرسال تقييمك، شكراً!",
+    "no_reviews": "لا توجد تقييمات بعد. كن الأول!",
+    "anonymous": "مجهول",
+    "select_size_error": "الرجاء اختيار المقاس للمتابعة",
+    "easy_returns": "إرجاع سهل",
+    "secure_payment": "دفع آمن"
   },
   "cart": {
     "title": "سلة التسوق",
@@ -49,7 +63,8 @@
     "remove": "حذف",
     "free_shipping": "شحن مجاني للطلبات فوق {{amount}}",
     "coupon_placeholder": "أدخل كود الخصم",
-    "apply": "تطبيق"
+    "apply": "تطبيق",
+    "added": "أُضيف إلى السلة"
   },
   "checkout": {
     "step_cart": "مراجعة السلة",
@@ -79,7 +94,8 @@
     "continue_apple": "المتابعة مع آبل",
     "no_account": "ليس لديك حساب؟",
     "have_account": "لديك حساب بالفعل؟",
-    "display_name": "الاسم المعروض"
+    "display_name": "الاسم المعروض",
+    "login_required": "الرجاء تسجيل الدخول للمتابعة"
   },
   "account": {
     "title": "حسابي",
@@ -151,7 +167,22 @@
     "redeem_info": "100 نقطة = خصم 10 ريال",
     "history": "سجل النقاط",
     "earned": "مكتسبة",
-    "redeemed": "مستخدمة"
+    "redeemed": "مستخدمة",
+    "earn_points": "اكسب {{points}} نقطة مع هذا الشراء"
+  },
+  "wishlist": {
+    "title": "المفضلة",
+    "empty": "قائمة مفضلتك فارغة",
+    "save": "حفظ في المفضلة",
+    "saved": "محفوظ",
+    "remove": "حذف"
+  },
+  "compare": {
+    "title": "مقارنة",
+    "add": "أضف للمقارنة",
+    "added": "في المقارنة",
+    "full": "يمكن مقارنة 3 منتجات كحد أقصى",
+    "clear": "مسح الكل"
   },
   "common": {
     "loading": "جاري التحميل...",
