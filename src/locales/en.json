@@ -241,7 +241,8 @@
     "language": "Language",
     "currency": "Currency",
     "cookie_message": "We use cookies to improve your experience.",
-    "accept": "Accept",
+    "cookie_necessary": "Necessary Only",
+    "accept": "Accept All",
     "back_to_top": "Back to Top"
   },
   "support": {

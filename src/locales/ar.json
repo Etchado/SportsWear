@@ -241,7 +241,8 @@
     "language": "اللغة",
     "currency": "العملة",
     "cookie_message": "نستخدم ملفات تعريف الارتباط لتحسين تجربتك.",
-    "accept": "قبول",
+    "cookie_necessary": "الضروري فقط",
+    "accept": "قبول الكل",
     "back_to_top": "العودة للأعلى"
   },
   "support": {
