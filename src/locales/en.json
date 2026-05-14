@@ -101,7 +101,14 @@
     "no_account": "Don't have an account?",
     "have_account": "Already have an account?",
     "display_name": "Display Name",
-    "login_required": "Please sign in to continue"
+    "login_required": "Please sign in to continue",
+    "confirm_password": "Confirm Password",
+    "check_email": "Check your email",
+    "verify_sent": "We sent a confirmation link to your email",
+    "reset_sent": "Reset link sent",
+    "forgot_instructions": "Enter your email and we'll send you a reset link.",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?"
   },
   "account": {
     "title": "My Account",

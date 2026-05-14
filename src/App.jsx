@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
+import { useAuth } from '@/context/AuthContext'
 
 // Providers
 import { ThemeProvider }    from '@/context/ThemeContext'
@@ -15,11 +16,13 @@ import { ProductsProvider } from '@/context/ProductsContext'
 
 // Layout
 import Layout from '@/components/layout/Layout'
+import RequireAuth from '@/components/layout/RequireAuth'
 
 // Eager page
 import HomePage from '@/pages/HomePage'
 
 // Lazy pages
+const AuthPage          = lazy(() => import('@/pages/AuthPage'))
 const ShopPage          = lazy(() => import('@/pages/ShopPage'))
 const MenPage           = lazy(() => import('@/pages/MenPage'))
 const WomenPage         = lazy(() => import('@/pages/WomenPage'))
@@ -50,11 +53,13 @@ function PageLoader() {
 }
 
 function AppRoutes() {
+  const { user } = useAuth()
   return (
     <Layout>
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/"               element={<HomePage />} />
+          <Route path="/auth"           element={user ? <Navigate to="/" replace /> : <AuthPage />} />
           <Route path="/shop"           element={<ShopPage />} />
           <Route path="/men"            element={<MenPage />} />
           <Route path="/women"          element={<WomenPage />} />
@@ -66,11 +71,11 @@ function AppRoutes() {
           <Route path="/drops"          element={<DropsPage />} />
           <Route path="/wishlist"       element={<WishlistPage />} />
           <Route path="/checkout"       element={<CheckoutPage />} />
-          <Route path="/account/*"      element={<AccountPage />} />
+          <Route path="/account/*"      element={<RequireAuth><AccountPage /></RequireAuth>} />
           <Route path="/size-guide"     element={<SizeGuidePage />} />
           <Route path="/about"          element={<AboutPage />} />
           <Route path="/support/*"      element={<SupportPage />} />
-          <Route path="/admin"          element={<AdminPage />} />
+          <Route path="/admin"          element={<RequireAuth><AdminPage /></RequireAuth>} />
           <Route path="*"               element={<NotFoundPage />} />
         </Routes>
       </Suspense>
