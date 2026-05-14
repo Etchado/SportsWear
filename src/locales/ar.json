@@ -168,6 +168,10 @@
     "sort_by": "ترتيب حسب",
     "filter": "تصفية",
     "clear_filters": "مسح الفلاتر",
+    "clear_all": "مسح الكل",
+    "filters": "الفلاتر",
+    "load_more": "تحميل المزيد",
+    "show_results": "عرض {{count}} نتيجة",
     "results": "{{count}} نتيجة",
     "newest": "الأحدث",
     "price_low": "السعر: من الأقل للأعلى",
@@ -221,5 +225,22 @@
     "gym": "الجيم",
     "yoga": "اليوغا",
     "swimming": "السباحة"
+  },
+  "filters": {
+    "gender": "الجنس",
+    "sport": "الرياضة",
+    "brand": "الماركة",
+    "category": "الفئة",
+    "size": "المقاس",
+    "color": "اللون",
+    "price": "السعر"
+  },
+  "sort": {
+    "newest": "الأحدث",
+    "popular": "الأكثر شعبية",
+    "rating": "الأعلى تقييماً",
+    "price_asc": "السعر: من الأقل",
+    "price_desc": "السعر: من الأعلى",
+    "name_asc": "الاسم أ–ي"
   }
 }

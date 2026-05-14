@@ -1,3 +1,9 @@
+import { useTranslation } from 'react-i18next'
+import CatalogLayout from '@/components/sections/CatalogLayout'
+import { usePageTitle } from '@/hooks/usePageTitle'
+
 export default function KidsPage() {
-  return <div className="min-h-screen p-8"><h1 className="text-3xl font-black">Kids</h1></div>
+  const { t } = useTranslation()
+  usePageTitle(t('nav.kids'))
+  return <CatalogLayout title={t('nav.kids')} preFilter={{ gender: 'Kids' }} />
 }

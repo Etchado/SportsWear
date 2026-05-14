@@ -168,6 +168,10 @@
     "sort_by": "Sort By",
     "filter": "Filter",
     "clear_filters": "Clear Filters",
+    "clear_all": "Clear All",
+    "filters": "Filters",
+    "load_more": "Load More",
+    "show_results": "Show {{count}} Results",
     "results": "{{count}} results",
     "newest": "Newest",
     "price_low": "Price: Low to High",
@@ -221,5 +225,22 @@
     "gym": "Gym",
     "yoga": "Yoga",
     "swimming": "Swimming"
+  },
+  "filters": {
+    "gender": "Gender",
+    "sport": "Sport",
+    "brand": "Brand",
+    "category": "Category",
+    "size": "Size",
+    "color": "Color",
+    "price": "Price"
+  },
+  "sort": {
+    "newest": "Newest",
+    "popular": "Most Popular",
+    "rating": "Best Rated",
+    "price_asc": "Price: Low to High",
+    "price_desc": "Price: High to Low",
+    "name_asc": "Name A–Z"
   }
 }
