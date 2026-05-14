@@ -155,6 +155,8 @@ export default function ProductPage() {
   const [qty, setQty]           = useState(1)
   const [sizeError, setSizeError] = useState(false)
   const [added, setAdded]       = useState(false)
+  const [notifyEmail, setNotifyEmail] = useState('')
+  const [notifySent, setNotifySent]   = useState(false)
 
   usePageTitle(product?.title ?? '')
 
@@ -191,6 +193,13 @@ export default function ProductPage() {
     openCart()
     toast.success(t('cart.added'))
     setTimeout(() => setAdded(false), 2500)
+  }
+
+  function handleNotifyMe(e) {
+    e.preventDefault()
+    if (!notifyEmail.trim()) return
+    setNotifySent(true)
+    toast.success(t('product.notify_me_success'))
   }
 
   if (loading) {
@@ -312,43 +321,91 @@ export default function ProductPage() {
             </div>
           )}
 
-          {/* Qty + Add to cart */}
-          <div className="flex gap-3">
-            <div className="flex items-center border-2 border-light-border dark:border-dark-border rounded-xl overflow-hidden">
-              <button
-                type="button"
-                onClick={() => setQty(q => Math.max(1, q - 1))}
-                disabled={qty <= 1}
-                className="px-3 py-2.5 font-black text-light-text dark:text-dark-text hover:bg-light-surface dark:hover:bg-dark-surface disabled:opacity-40 transition-colors"
-              >−</button>
-              <span className="px-4 font-black text-light-text dark:text-dark-text tabular-nums">{qty}</span>
-              <button
-                type="button"
-                onClick={() => setQty(q => q + 1)}
-                className="px-3 py-2.5 font-black text-light-text dark:text-dark-text hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
-              >+</button>
-            </div>
+          {/* Qty + Add to cart / Notify Me */}
+          {product.in_stock !== false ? (
+            <div className="flex gap-3">
+              <div className="flex items-center border-2 border-light-border dark:border-dark-border rounded-xl overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => setQty(q => Math.max(1, q - 1))}
+                  disabled={qty <= 1}
+                  className="px-3 py-2.5 font-black text-light-text dark:text-dark-text hover:bg-light-surface dark:hover:bg-dark-surface disabled:opacity-40 transition-colors"
+                >−</button>
+                <span className="px-4 font-black text-light-text dark:text-dark-text tabular-nums">{qty}</span>
+                <button
+                  type="button"
+                  onClick={() => setQty(q => q + 1)}
+                  className="px-3 py-2.5 font-black text-light-text dark:text-dark-text hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
+                >+</button>
+              </div>
 
-            <button
-              type="button"
-              onClick={handleAddToCart}
-              disabled={!product.in_stock}
-              className="flex-1 py-3 rounded-xl font-black text-sm text-white transition-all disabled:opacity-50 relative overflow-hidden"
-              style={{ background: '#FF2D78' }}
-            >
+              <button
+                type="button"
+                onClick={handleAddToCart}
+                className="flex-1 py-3 rounded-xl font-black text-sm text-white transition-all relative overflow-hidden"
+                style={{ background: '#FF2D78' }}
+              >
+                <AnimatePresence mode="wait">
+                  {added ? (
+                    <motion.span key="added" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} className="flex items-center justify-center gap-2">
+                      ✓ {t('cart.added')}
+                    </motion.span>
+                  ) : (
+                    <motion.span key="add" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>
+                      {t('product.add_to_cart')}
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              </button>
+            </div>
+          ) : (
+            /* Out-of-stock: Notify Me panel */
+            <div className="rounded-2xl border-2 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 p-5">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🔔</span>
+                <div>
+                  <p className="font-black text-sm text-amber-900 dark:text-amber-200">{t('product.notify_me_title')}</p>
+                  <p className="text-xs text-amber-700 dark:text-amber-400 mt-0.5">{t('product.notify_me_desc')}</p>
+                </div>
+              </div>
               <AnimatePresence mode="wait">
-                {added ? (
-                  <motion.span key="added" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} className="flex items-center justify-center gap-2">
-                    ✓ {t('cart.added')}
-                  </motion.span>
+                {notifySent ? (
+                  <motion.div
+                    key="sent"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center gap-2 text-sm font-black text-amber-800 dark:text-amber-300"
+                  >
+                    <span>✅</span> {t('product.notify_me_success')}
+                  </motion.div>
                 ) : (
-                  <motion.span key="add" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>
-                    {product.in_stock ? t('product.add_to_cart') : t('product.out_of_stock')}
-                  </motion.span>
+                  <motion.form
+                    key="form"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    onSubmit={handleNotifyMe}
+                    className="flex gap-2"
+                  >
+                    <input
+                      type="email"
+                      required
+                      value={notifyEmail}
+                      onChange={e => setNotifyEmail(e.target.value)}
+                      placeholder={t('product.notify_me_email')}
+                      className="flex-1 px-3 py-2.5 rounded-xl text-sm border-2 border-amber-200 dark:border-amber-700 bg-white dark:bg-dark-surface text-light-text dark:text-dark-text placeholder:text-light-muted dark:placeholder:text-dark-muted focus:outline-none focus:border-amber-400"
+                    />
+                    <button
+                      type="submit"
+                      className="px-4 py-2.5 rounded-xl font-black text-sm text-white whitespace-nowrap"
+                      style={{ background: '#F59E0B' }}
+                    >
+                      {t('product.notify_me')}
+                    </button>
+                  </motion.form>
                 )}
               </AnimatePresence>
-            </button>
-          </div>
+            </div>
+          )}
 
           {/* Wishlist + Compare */}
           <div className="flex gap-3">

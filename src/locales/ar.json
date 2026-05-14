@@ -50,7 +50,12 @@
     "anonymous": "مجهول",
     "select_size_error": "الرجاء اختيار المقاس للمتابعة",
     "easy_returns": "إرجاع سهل",
-    "secure_payment": "دفع آمن"
+    "secure_payment": "دفع آمن",
+    "notify_me": "أخبرني عند التوفر",
+    "notify_me_title": "نفد المخزون — سنُخبرك",
+    "notify_me_desc": "أدخل بريدك الإلكتروني وسنُعلمك فور توفر هذا المنتج.",
+    "notify_me_email": "بريدك الإلكتروني",
+    "notify_me_success": "تم تسجيلك! سنُخبرك عند عودة المنتج."
   },
   "cart": {
     "title": "سلة التسوق",

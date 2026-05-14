@@ -7,7 +7,13 @@
       "Bash(git commit -m ' *)",
       "Bash(gh repo *)",
       "PowerShell(gh repo create sportswear --public --source=\"c:\\\\Users\\\\ikhal\\\\OneDrive\\\\��ꫢ맟�\\\\MyVScode\\\\Projects\\\\SportsWear\" --remote=origin --push)",
-      "PowerShell(gh auth status)"
+      "PowerShell(gh auth status)",
+      "Bash(npm run *)",
+      "Bash(git push *)",
+      "Bash(npx vite *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\ikhal\\OneDrive\\��ꫢ맟�\\MyVScode\\Projects\\SportsWear"
     ]
   }
 }

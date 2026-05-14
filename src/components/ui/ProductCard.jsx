@@ -28,8 +28,11 @@ export default function ProductCard({ product }) {
 
   const displayImage = product.images?.[activeColor] ?? product.images?.[0]
 
+  const inStock = product.in_stock !== false
+
   function handleAddToCart(e) {
     e.preventDefault()
+    if (!inStock) return
     addItem(product, product.colors[activeColor] ?? product.colors[0], product.sizes?.[0] ?? 'One Size')
     success(t('product.add_to_cart') + ' ✓')
   }
@@ -62,8 +65,17 @@ export default function ProductCard({ product }) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
 
+          {/* Out-of-stock overlay */}
+          {!inStock && (
+            <div className="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
+              <span className="px-3 py-1.5 rounded-full text-xs font-black text-white bg-zinc-800/90 tracking-wide">
+                {t('product.out_of_stock')}
+              </span>
+            </div>
+          )}
+
           {/* Badges */}
-          <div className="absolute top-2 start-2 flex flex-col gap-1">
+          <div className="absolute top-2 start-2 flex flex-col gap-1 z-20">
             {product.badge && <Badge label={product.badge} />}
             {discount && <Badge label={`-${discount}%`} className="!bg-[#FF2D78] !text-white" />}
           </div>
@@ -101,15 +113,26 @@ export default function ProductCard({ product }) {
             </button>
           </div>
 
-          {/* Quick add — appears on hover */}
-          <div className="absolute bottom-0 inset-x-0 translate-y-full group-hover:translate-y-0 transition-transform duration-200">
-            <button
-              onClick={handleAddToCart}
-              className="w-full py-3 text-xs font-black text-white tracking-wider"
-              style={{ background: '#FF2D78' }}
-            >
-              + {t('product.add_to_cart').toUpperCase()}
-            </button>
+          {/* Quick add / Notify Me — appears on hover */}
+          <div className="absolute bottom-0 inset-x-0 translate-y-full group-hover:translate-y-0 transition-transform duration-200 z-20">
+            {inStock ? (
+              <button
+                onClick={handleAddToCart}
+                className="w-full py-3 text-xs font-black text-white tracking-wider"
+                style={{ background: '#FF2D78' }}
+              >
+                + {t('product.add_to_cart').toUpperCase()}
+              </button>
+            ) : (
+              <Link
+                to={`/product/${product.id}`}
+                onClick={e => e.stopPropagation()}
+                className="flex items-center justify-center gap-1.5 w-full py-3 text-xs font-black tracking-wider"
+                style={{ background: '#fffbeb', color: '#92400e', borderTop: '1px solid #fde68a' }}
+              >
+                🔔 {t('product.notify_me').toUpperCase()}
+              </Link>
+            )}
           </div>
         </div>
 

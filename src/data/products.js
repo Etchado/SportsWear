@@ -65,7 +65,7 @@ export const PRODUCTS = [
     description: 'The icon that defined an era. Still turning heads after 30+ years.',
     long_description: 'The Nike Air Max 90 stays true to its OG running roots with the classic Waffle outsole, stitched overlays and iconic Max Air cushioning.',
     specs: { cushioning: 'Max Air', outsole: 'Waffle', upper: 'Leather/mesh' },
-    rating: 4.6, reviews_count: 534, badge: null, is_drop: false, in_stock: true,
+    rating: 4.6, reviews_count: 534, badge: null, is_drop: false, in_stock: false,
   },
   {
     id: '00000000-0000-0000-0000-000000000005',
@@ -81,7 +81,7 @@ export const PRODUCTS = [
     description: 'Match-ready football jersey with Dri-FIT sweat management.',
     long_description: 'The Nike Strike Jersey is designed for the pitch. Dri-FIT technology keeps you dry as you attack.',
     specs: { fabric: '100% Polyester', technology: 'Dri-FIT', fit: 'Standard' },
-    rating: 4.3, reviews_count: 97, badge: 'SALE', is_drop: false, in_stock: true,
+    rating: 4.3, reviews_count: 97, badge: 'SALE', is_drop: false, in_stock: false,
   },
   {
     id: '00000000-0000-0000-0000-000000000006',
@@ -161,7 +161,7 @@ export const PRODUCTS = [
     description: 'Ultra-light race shorts designed to help you go faster.',
     long_description: 'The Adidas Adizero Shorts are built for speed. Made from lightweight, moisture-wicking fabric with a split hem design.',
     specs: { weight: '65g', fabric: '100% Polyester', liner: 'Built-in brief', length: '4 inch' },
-    rating: 4.3, reviews_count: 89, badge: 'SALE', is_drop: false, in_stock: true,
+    rating: 4.3, reviews_count: 89, badge: 'SALE', is_drop: false, in_stock: false,
   },
   {
     id: '00000000-0000-0000-0000-000000000011',
@@ -177,7 +177,7 @@ export const PRODUCTS = [
     description: 'Lightweight running jacket that packs down into its own pocket.',
     long_description: 'Designed for outdoor running in unpredictable conditions. The Own the Run Jacket offers wind and light rain protection with a packable design.',
     specs: { packable: true, wind_resistant: true, fabric: '100% Recycled Polyester', reflective_details: true },
-    rating: 4.6, reviews_count: 112, badge: 'NEW', is_drop: false, in_stock: true,
+    rating: 4.6, reviews_count: 112, badge: 'NEW', is_drop: false, in_stock: false,
   },
   {
     id: '00000000-0000-0000-0000-000000000012',

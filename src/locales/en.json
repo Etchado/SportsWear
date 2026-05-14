@@ -50,7 +50,12 @@
     "anonymous": "Anonymous",
     "select_size_error": "Please select a size to continue",
     "easy_returns": "Easy Returns",
-    "secure_payment": "Secure Payment"
+    "secure_payment": "Secure Payment",
+    "notify_me": "Notify Me",
+    "notify_me_title": "Out of Stock — Get Notified",
+    "notify_me_desc": "Enter your email and we'll notify you the moment this item is back in stock.",
+    "notify_me_email": "Your email address",
+    "notify_me_success": "You're on the list! We'll notify you when it's back."
   },
   "cart": {
     "title": "Your Cart",
