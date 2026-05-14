@@ -1,0 +1,32 @@
+-- ============================================================
+-- SportsWear — Seed Data (placeholder)
+-- Full product seed data will be added in Step 4.
+-- Run schema.sql FIRST, then this file.
+-- ============================================================
+
+-- Coupon codes reference (used in CheckoutContext — no table needed,
+-- validated client-side against this list):
+--
+--   SPORT10   → 10% off entire order
+--   SAVE50    → 50 SAR flat discount
+--   FREESHIP  → Free shipping
+--   NEWUSER20 → 20% off (new users only)
+--   VOLT30    → 30% off sale items
+
+-- Sample: uncomment to insert a test product
+-- insert into products (title, brand, sport, gender, category, price, colors, sizes, images, description, long_description, specs, badge)
+-- values (
+--   'Air Zoom Pegasus 41',
+--   'Nike', 'Running', 'Men', 'Shoes',
+--   549.00,
+--   array['Black','White','Volt'],
+--   array['EU40','EU41','EU42','EU43','EU44','EU45'],
+--   array[
+--     'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop',
+--     'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80'
+--   ],
+--   'The Nike Air Zoom Pegasus 41 continues to be a trusted training partner.',
+--   'Engineered for daily training runs, the Pegasus 41 delivers responsive cushioning with a snappy ride.',
+--   '{"weight": "279g", "drop": "10mm", "type": "Road"}',
+--   'NEW'
+-- );
