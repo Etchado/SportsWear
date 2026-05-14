@@ -63,6 +63,7 @@
     "remove": "حذف",
     "free_shipping": "شحن مجاني للطلبات فوق {{amount}}",
     "coupon_placeholder": "أدخل كود الخصم",
+    "coupon": "كود الخصم",
     "apply": "تطبيق",
     "added": "أُضيف إلى السلة"
   },
@@ -80,7 +81,12 @@
     "city": "المدينة",
     "country": "الدولة",
     "redeem_points": "استخدام النقاط",
-    "points_available": "{{count}} نقطة متاحة"
+    "points_available": "{{count}} نقطة متاحة",
+    "order_summary": "ملخص الطلب",
+    "coupon": "كود الخصم",
+    "invalid_coupon": "كود الخصم غير صحيح",
+    "continue_shipping": "المتابعة للشحن",
+    "continue_payment": "المتابعة للدفع"
   },
   "auth": {
     "sign_in": "تسجيل الدخول",

@@ -63,6 +63,7 @@
     "remove": "Remove",
     "free_shipping": "Free shipping on orders over {{amount}}",
     "coupon_placeholder": "Enter coupon code",
+    "coupon": "Coupon",
     "apply": "Apply",
     "added": "Added to Cart"
   },
@@ -80,7 +81,12 @@
     "city": "City",
     "country": "Country",
     "redeem_points": "Redeem Points",
-    "points_available": "{{count}} points available"
+    "points_available": "{{count}} points available",
+    "order_summary": "Order Summary",
+    "coupon": "Coupon",
+    "invalid_coupon": "Invalid coupon code",
+    "continue_shipping": "Continue to Shipping",
+    "continue_payment": "Continue to Payment"
   },
   "auth": {
     "sign_in": "Sign In",
