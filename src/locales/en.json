@@ -113,7 +113,8 @@
     "reset_sent": "Reset link sent",
     "forgot_instructions": "Enter your email and we'll send you a reset link.",
     "no_account": "Don't have an account?",
-    "have_account": "Already have an account?"
+    "have_account": "Already have an account?",
+    "continue_phone": "Continue with Phone"
   },
   "account": {
     "title": "My Account",
@@ -248,7 +249,8 @@
     "cookie_message": "We use cookies to improve your experience.",
     "cookie_necessary": "Necessary Only",
     "accept": "Accept All",
-    "back_to_top": "Back to Top"
+    "back_to_top": "Back to Top",
+    "coming_soon": "Coming Soon"
   },
   "support": {
     "title": "Support",

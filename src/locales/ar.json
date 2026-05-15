@@ -113,7 +113,8 @@
     "reset_sent": "تم إرسال رابط إعادة التعيين",
     "forgot_instructions": "أدخل بريدك الإلكتروني وسنرسل لك رابط إعادة التعيين.",
     "no_account": "ليس لديك حساب؟",
-    "have_account": "لديك حساب بالفعل؟"
+    "have_account": "لديك حساب بالفعل؟",
+    "continue_phone": "المتابعة برقم الهاتف"
   },
   "account": {
     "title": "حسابي",
@@ -248,7 +249,8 @@
     "cookie_message": "نستخدم ملفات تعريف الارتباط لتحسين تجربتك.",
     "cookie_necessary": "الضروري فقط",
     "accept": "قبول الكل",
-    "back_to_top": "العودة للأعلى"
+    "back_to_top": "العودة للأعلى",
+    "coming_soon": "قريباً"
   },
   "support": {
     "title": "الدعم",
