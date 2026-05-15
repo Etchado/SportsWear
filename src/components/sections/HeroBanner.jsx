@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useTheme } from '@/context/ThemeContext'
 
 const SLIDES = [
   {
@@ -27,7 +28,7 @@ const SLIDES = [
 
 export default function HeroBanner() {
   const { t } = useTranslation()
-  // Single hero for now — can extend to a carousel later
+  const { isDark } = useTheme()
   const slide = SLIDES[0]
 
   return (
@@ -37,17 +38,32 @@ export default function HeroBanner() {
         <img
           src={slide.bg}
           alt="Hero"
-          className="w-full h-full object-cover dark:brightness-50 dark:saturate-75 transition-[filter] duration-700"
+          className="w-full h-full object-cover"
+          style={{
+            filter: isDark ? 'brightness(0.45) saturate(0.7)' : 'none',
+            transition: 'filter 0.7s ease',
+          }}
           loading="eager"
           fetchpriority="high"
         />
         {/* Base gradient for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-e from-black/70 via-black/40 to-transparent" />
         {/* Night overlay — dark mode only */}
-        <div className="absolute inset-0 hidden dark:block bg-gradient-to-br from-blue-950/70 via-indigo-900/40 to-slate-950/60 transition-opacity duration-700" />
-        {/* Stars / light flare — dark mode only, subtle */}
-        <div className="absolute inset-0 hidden dark:block opacity-30"
-          style={{ background: 'radial-gradient(ellipse at 70% 20%, rgba(100,120,220,0.4) 0%, transparent 60%)' }} />
+        <div
+          className="absolute inset-0 transition-opacity duration-700"
+          style={{
+            opacity: isDark ? 1 : 0,
+            background: 'linear-gradient(135deg, rgba(7,17,55,0.85) 0%, rgba(29,0,80,0.55) 50%, rgba(3,12,45,0.75) 100%)',
+          }}
+        />
+        {/* Moon glow — top-right ambient light in dark mode */}
+        <div
+          className="absolute inset-0 transition-opacity duration-700"
+          style={{
+            opacity: isDark ? 0.5 : 0,
+            background: 'radial-gradient(ellipse at 75% 15%, rgba(147,197,253,0.25) 0%, rgba(99,102,241,0.15) 35%, transparent 65%)',
+          }}
+        />
       </div>
 
       {/* Content */}
