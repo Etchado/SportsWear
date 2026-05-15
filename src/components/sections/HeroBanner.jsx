@@ -145,7 +145,7 @@ export default function HeroBanner() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="text-xl sm:text-2xl lg:text-3xl font-medium mb-10 max-w-2xl"
-              style={{ color: 'rgba(255,255,255,0.85)' }}
+              style={{ color: isDark ? 'rgba(255,255,255,0.85)' : '#0A0A0A' }}
             >
               {t(slide.subtitleKey)}
             </motion.p>
