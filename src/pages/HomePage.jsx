@@ -10,19 +10,22 @@ export default function HomePage() {
       <BrandGrid />
       <FeaturedProducts
         titleKey="home.new_arrivals"
+        labelKey="common.new"
         filter={p => p.badge === 'NEW'}
         viewAllTo="/shop?badge=NEW"
         accent="#0066FF"
       />
       <DropsTeaser />
       <FeaturedProducts
-        title="Bestsellers"
+        titleKey="home.bestsellers"
+        labelKey="common.bestseller"
         filter={p => p.badge === 'BESTSELLER'}
         viewAllTo="/shop?badge=BESTSELLER"
         accent="#FF2D78"
       />
       <FeaturedProducts
-        title="Sale — Up to 30% Off"
+        titleKey="home.sale_section"
+        labelKey="common.sale"
         filter={p => p.badge === 'SALE'}
         viewAllTo="/shop?badge=SALE"
         accent="#FF2D78"

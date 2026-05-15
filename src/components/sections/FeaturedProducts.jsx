@@ -5,7 +5,7 @@ import { useProducts } from '@/context/ProductsContext'
 import ProductCard from '@/components/ui/ProductCard'
 import { PRODUCTS } from '@/data/products'
 
-export default function FeaturedProducts({ title, titleKey, filter, viewAllTo, accent = '#FF2D78' }) {
+export default function FeaturedProducts({ title, titleKey, labelKey, filter, viewAllTo, accent = '#FF2D78' }) {
   const { t } = useTranslation()
   const { products, loading } = useProducts()
 
@@ -15,13 +15,14 @@ export default function FeaturedProducts({ title, titleKey, filter, viewAllTo, a
   const displayed = filtered.slice(0, 8)
 
   const heading = title ?? (titleKey ? t(titleKey) : t('home.new_arrivals'))
+  const label   = labelKey ? t(labelKey) : t('common.new')
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
       <div className="flex items-end justify-between mb-6">
         <div>
           <p className="text-xs font-black uppercase tracking-widest mb-1.5" style={{ color: accent }}>
-            {t('common.new')}
+            {label}
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-light-text dark:text-dark-text">
             {heading}
@@ -33,7 +34,7 @@ export default function FeaturedProducts({ title, titleKey, filter, viewAllTo, a
             className="text-sm font-black hover:opacity-70 transition-opacity flex items-center gap-1"
             style={{ color: accent }}
           >
-            {t('common.results', { count: '' }).replace('results','all')}
+            {t('home.view_all')}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

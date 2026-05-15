@@ -20,7 +20,10 @@
     "shop_now": "Shop Now",
     "new_arrivals": "New Arrivals",
     "featured_drops": "Featured Drops",
-    "brand_grid_title": "Shop by Brand"
+    "brand_grid_title": "Shop by Brand",
+    "bestsellers": "Bestsellers",
+    "sale_section": "Sale — Up to 30% Off",
+    "view_all": "View All"
   },
   "product": {
     "add_to_cart": "Add to Cart",
@@ -141,6 +144,7 @@
   },
   "drops": {
     "title": "Limited Drops",
+    "limited_releases": "Limited Releases",
     "countdown": "Drops in",
     "days": "Days",
     "hours": "Hours",
@@ -200,6 +204,7 @@
   "wishlist": {
     "title": "Wishlist",
     "empty": "Your wishlist is empty",
+    "empty_subtitle": "Save items you love and come back to them anytime.",
     "save": "Save to Wishlist",
     "saved": "Saved",
     "remove": "Remove"

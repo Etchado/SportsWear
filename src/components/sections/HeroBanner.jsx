@@ -74,7 +74,7 @@ export default function HeroBanner() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  style={i === 1 ? { color: slide.accent } : { color: '#2D3748' }}
+                  style={i === 1 ? { color: slide.accent } : { color: '#FFFFFF' }}
                 >
                   {line.trim()}
                 </motion.span>
@@ -87,7 +87,7 @@ export default function HeroBanner() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="text-xl sm:text-2xl lg:text-3xl font-medium mb-10 max-w-2xl"
-              style={{ color: '#1A202C' }}
+              style={{ color: 'rgba(255,255,255,0.85)' }}
             >
               {t(slide.subtitleKey)}
             </motion.p>
@@ -112,7 +112,7 @@ export default function HeroBanner() {
               <Link
                 to="/drops"
                 className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-black text-base tracking-wide hover:opacity-80 transition-opacity"
-                style={{ background: '#1A202C', color: '#ffffff' }}
+                style={{ background: 'rgba(255,255,255,0.15)', color: '#ffffff', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.25)' }}
               >
                 {t('drops.title')}
               </Link>

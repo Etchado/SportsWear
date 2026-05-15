@@ -11,6 +11,7 @@ import { useLoyalty } from '@/context/LoyaltyContext'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
 import { usePageTitle } from '@/hooks/usePageTitle'
+import { useRecentlyViewed } from '@/hooks/useRecentlyViewed'
 import { handleImgError } from '@/lib/imgFallback'
 import Badge from '@/components/ui/Badge'
 import ReviewsSection from '@/components/sections/ReviewsSection'
@@ -147,6 +148,8 @@ export default function ProductPage() {
   const { user } = useAuth()
   const { success, info } = useToast()
   const navigate = useNavigate()
+
+  const { viewedIds } = useRecentlyViewed(id)
 
   const [product, setProduct]   = useState(null)
   const [loading, setLoading]   = useState(true)
@@ -497,6 +500,59 @@ export default function ProductPage() {
 
       {/* Related */}
       <RelatedProducts product={product} />
+
+      {/* Recently Viewed */}
+      <RecentlyViewedSection ids={viewedIds} />
     </div>
+  )
+}
+
+function RecentlyViewedSection({ ids }) {
+  const { t } = useTranslation()
+  const { format } = useCurrency()
+  const allProducts = PRODUCTS
+
+  const items = ids
+    .map(id => allProducts.find(p => p.id === id))
+    .filter(Boolean)
+    .slice(0, 6)
+
+  if (items.length === 0) return null
+
+  return (
+    <section className="mt-16">
+      <h2 className="text-xl font-black text-light-text dark:text-dark-text mb-5">
+        {t('product.recently_viewed')}
+      </h2>
+      <div className="flex gap-4 overflow-x-auto pb-3 snap-x snap-mandatory">
+        {items.map(p => (
+          <Link
+            key={p.id}
+            to={`/product/${p.id}`}
+            className="flex-shrink-0 snap-start w-40 sm:w-48 group"
+          >
+            <div className="relative rounded-xl overflow-hidden bg-light-surface dark:bg-dark-surface aspect-square mb-2">
+              <img
+                src={p.images?.[0]}
+                alt={p.title}
+                onError={handleImgError}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              {p.in_stock === false && (
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <span className="text-[10px] font-black text-white bg-black/60 px-2 py-0.5 rounded-full">
+                    {t('product.out_of_stock')}
+                  </span>
+                </div>
+              )}
+            </div>
+            <p className="text-xs font-black text-light-text dark:text-dark-text line-clamp-2 leading-snug mb-1">
+              {p.title}
+            </p>
+            <p className="text-xs font-black text-brand-pink">{format(p.price)}</p>
+          </Link>
+        ))}
+      </div>
+    </section>
   )
 }

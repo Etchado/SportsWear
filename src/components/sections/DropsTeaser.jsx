@@ -74,7 +74,7 @@ export default function DropsTeaser() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="text-xs font-black uppercase tracking-widest mb-2" style={{ color: '#FF2D78' }}>
-              Limited Releases
+              {t('drops.limited_releases')}
             </p>
             <h2 className="text-3xl sm:text-4xl font-black text-white">
               {t('home.featured_drops')}

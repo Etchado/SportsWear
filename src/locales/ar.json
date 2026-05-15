@@ -20,7 +20,10 @@
     "shop_now": "تسوق الآن",
     "new_arrivals": "وصل حديثاً",
     "featured_drops": "الإطلاقات المميزة",
-    "brand_grid_title": "تسوق حسب الماركة"
+    "brand_grid_title": "تسوق حسب الماركة",
+    "bestsellers": "الأكثر مبيعاً",
+    "sale_section": "تخفيضات — حتى 30%",
+    "view_all": "عرض الكل"
   },
   "product": {
     "add_to_cart": "أضف إلى السلة",
@@ -141,6 +144,7 @@
   },
   "drops": {
     "title": "إطلاقات محدودة",
+    "limited_releases": "إصدارات محدودة",
     "countdown": "ينطلق خلال",
     "days": "أيام",
     "hours": "ساعات",
@@ -200,6 +204,7 @@
   "wishlist": {
     "title": "المفضلة",
     "empty": "قائمة مفضلتك فارغة",
+    "empty_subtitle": "احفظ المنتجات التي تعجبك وارجع إليها في أي وقت.",
     "save": "حفظ في المفضلة",
     "saved": "محفوظ",
     "remove": "حذف"
