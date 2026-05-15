@@ -40,28 +40,64 @@ export default function HeroBanner() {
           alt="Hero"
           className="w-full h-full object-cover"
           style={{
-            filter: isDark ? 'brightness(0.45) saturate(0.7)' : 'none',
-            transition: 'filter 0.7s ease',
+            filter: isDark
+              ? 'brightness(0.28) saturate(0.5) hue-rotate(200deg)'
+              : 'none',
+            transition: 'filter 0.9s ease',
           }}
           loading="eager"
           fetchpriority="high"
         />
         {/* Base gradient for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-e from-black/70 via-black/40 to-transparent" />
-        {/* Night overlay — dark mode only */}
+        <div className="absolute inset-0 bg-gradient-to-e from-black/70 via-black/30 to-transparent" />
+        {/* Night atmosphere overlay */}
         <div
-          className="absolute inset-0 transition-opacity duration-700"
+          className="absolute inset-0 pointer-events-none"
           style={{
             opacity: isDark ? 1 : 0,
-            background: 'linear-gradient(135deg, rgba(7,17,55,0.85) 0%, rgba(29,0,80,0.55) 50%, rgba(3,12,45,0.75) 100%)',
+            background: 'linear-gradient(160deg, rgba(5,10,40,0.7) 0%, rgba(15,5,60,0.5) 40%, rgba(2,8,30,0.65) 100%)',
+            transition: 'opacity 0.9s ease',
           }}
         />
-        {/* Moon glow — top-right ambient light in dark mode */}
+        {/* Moon — top-right */}
         <div
-          className="absolute inset-0 transition-opacity duration-700"
+          className="absolute pointer-events-none"
           style={{
-            opacity: isDark ? 0.5 : 0,
-            background: 'radial-gradient(ellipse at 75% 15%, rgba(147,197,253,0.25) 0%, rgba(99,102,241,0.15) 35%, transparent 65%)',
+            top: '8%',
+            right: '12%',
+            width: 56,
+            height: 56,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(255,252,220,0.95) 0%, rgba(220,230,255,0.7) 50%, transparent 70%)',
+            boxShadow: '0 0 40px 18px rgba(180,200,255,0.25)',
+            opacity: isDark ? 1 : 0,
+            transition: 'opacity 0.9s ease',
+          }}
+        />
+        {/* Moonlight spill down from moon */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            opacity: isDark ? 0.6 : 0,
+            background: 'radial-gradient(ellipse at 88% 8%, rgba(180,200,255,0.3) 0%, rgba(100,130,255,0.1) 35%, transparent 65%)',
+            transition: 'opacity 0.9s ease',
+          }}
+        />
+        {/* Stars scattered top half */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            opacity: isDark ? 0.7 : 0,
+            backgroundImage: [
+              'radial-gradient(1px 1px at 20% 12%, rgba(255,255,255,0.9) 0%, transparent 100%)',
+              'radial-gradient(1px 1px at 35% 6%, rgba(255,255,255,0.8) 0%, transparent 100%)',
+              'radial-gradient(1.5px 1.5px at 55% 10%, rgba(255,255,255,0.95) 0%, transparent 100%)',
+              'radial-gradient(1px 1px at 70% 18%, rgba(255,255,255,0.7) 0%, transparent 100%)',
+              'radial-gradient(1px 1px at 45% 4%, rgba(255,255,255,0.85) 0%, transparent 100%)',
+              'radial-gradient(1.5px 1.5px at 10% 8%, rgba(255,255,255,0.75) 0%, transparent 100%)',
+              'radial-gradient(1px 1px at 62% 5%, rgba(255,255,255,0.6) 0%, transparent 100%)',
+            ].join(','),
+            transition: 'opacity 0.9s ease',
           }}
         />
       </div>
