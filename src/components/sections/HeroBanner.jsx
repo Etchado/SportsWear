@@ -132,7 +132,7 @@ export default function HeroBanner() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  style={i === 1 ? { color: slide.accent } : { color: '#FFFFFF' }}
+                  style={i === 1 ? { color: slide.accent } : { color: isDark ? '#FFFFFF' : '#0A0A0A' }}
                 >
                   {line.trim()}
                 </motion.span>
