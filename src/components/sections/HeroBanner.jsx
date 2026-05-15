@@ -37,11 +37,17 @@ export default function HeroBanner() {
         <img
           src={slide.bg}
           alt="Hero"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover dark:brightness-50 dark:saturate-75 transition-[filter] duration-700"
           loading="eager"
           fetchpriority="high"
         />
+        {/* Base gradient for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-e from-black/70 via-black/40 to-transparent" />
+        {/* Night overlay — dark mode only */}
+        <div className="absolute inset-0 hidden dark:block bg-gradient-to-br from-blue-950/70 via-indigo-900/40 to-slate-950/60 transition-opacity duration-700" />
+        {/* Stars / light flare — dark mode only, subtle */}
+        <div className="absolute inset-0 hidden dark:block opacity-30"
+          style={{ background: 'radial-gradient(ellipse at 70% 20%, rgba(100,120,220,0.4) 0%, transparent 60%)' }} />
       </div>
 
       {/* Content */}
