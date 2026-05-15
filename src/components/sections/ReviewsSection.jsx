@@ -43,7 +43,7 @@ function RatingBar({ label, pct }) {
 export default function ReviewsSection({ productId, rating = 0, reviewCount = 0, reviews: initialReviews = [] }) {
   const { t } = useTranslation()
   const { user } = useAuth()
-  const { toast } = useToast()
+  const { success, error: toastError } = useToast()
 
   const [reviews, setReviews] = useState(initialReviews)
   const [showForm, setShowForm] = useState(false)
@@ -66,9 +66,9 @@ export default function ReviewsSection({ productId, rating = 0, reviewCount = 0,
       setShowForm(false)
       setBody('')
       setNewRating(5)
-      toast.success(t('product.review_submitted'))
+      success(t('product.review_submitted'))
     } catch {
-      toast.error(t('common.error'))
+      toastError(t('common.error'))
     } finally {
       setSubmitting(false)
     }

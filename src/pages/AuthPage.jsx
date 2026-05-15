@@ -122,7 +122,7 @@ function Divider() {
 function SignIn({ onSwitch, onSuccess }) {
   const { t } = useTranslation()
   const { signIn, signInWithGoogle, signInWithApple } = useAuth()
-  const { toast } = useToast()
+  const { error: toastError } = useToast()
   const [form, setForm]     = useState({ email: '', password: '' })
   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
@@ -142,7 +142,7 @@ function SignIn({ onSwitch, onSuccess }) {
       await signIn(form.email, form.password)
       onSuccess()
     } catch (err) {
-      toast.error(err.message ?? t('common.error'))
+      toastError(err.message ?? t('common.error'))
     } finally {
       setLoading(false)
     }
@@ -150,11 +150,11 @@ function SignIn({ onSwitch, onSuccess }) {
 
   async function handleGoogle() {
     setLoading(true)
-    try { await signInWithGoogle() } catch (err) { toast.error(err.message) } finally { setLoading(false) }
+    try { await signInWithGoogle() } catch (err) { toastError(err.message) } finally { setLoading(false) }
   }
   async function handleApple() {
     setLoading(true)
-    try { await signInWithApple() } catch (err) { toast.error(err.message) } finally { setLoading(false) }
+    try { await signInWithApple() } catch (err) { toastError(err.message) } finally { setLoading(false) }
   }
 
   return (
@@ -197,7 +197,7 @@ function SignIn({ onSwitch, onSuccess }) {
 function Register({ onSwitch, onSuccess }) {
   const { t } = useTranslation()
   const { signUp, signInWithGoogle, signInWithApple } = useAuth()
-  const { toast } = useToast()
+  const { error: toastError } = useToast()
   const [form, setForm]     = useState({ display_name: '', email: '', password: '', confirm: '' })
   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
@@ -218,7 +218,7 @@ function Register({ onSwitch, onSuccess }) {
       await signUp(form.email, form.password, form.display_name)
       setDone(true)
     } catch (err) {
-      toast.error(err.message ?? t('common.error'))
+      toastError(err.message ?? t('common.error'))
     } finally {
       setLoading(false)
     }
@@ -226,11 +226,11 @@ function Register({ onSwitch, onSuccess }) {
 
   async function handleGoogle() {
     setLoading(true)
-    try { await signInWithGoogle() } catch (err) { toast.error(err.message) } finally { setLoading(false) }
+    try { await signInWithGoogle() } catch (err) { toastError(err.message) } finally { setLoading(false) }
   }
   async function handleApple() {
     setLoading(true)
-    try { await signInWithApple() } catch (err) { toast.error(err.message) } finally { setLoading(false) }
+    try { await signInWithApple() } catch (err) { toastError(err.message) } finally { setLoading(false) }
   }
 
   if (done) return (
@@ -282,7 +282,7 @@ function Register({ onSwitch, onSuccess }) {
 function ForgotPassword({ onSwitch }) {
   const { t } = useTranslation()
   const { resetPassword } = useAuth()
-  const { toast } = useToast()
+  const { error: toastError } = useToast()
   const [email, setEmail]   = useState('')
   const [error, setError]   = useState('')
   const [loading, setLoading] = useState(false)
@@ -297,7 +297,7 @@ function ForgotPassword({ onSwitch }) {
       await resetPassword(email)
       setSent(true)
     } catch (err) {
-      toast.error(err.message ?? t('common.error'))
+      toastError(err.message ?? t('common.error'))
     } finally {
       setLoading(false)
     }

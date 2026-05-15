@@ -79,7 +79,7 @@ function CountdownTiles({ targetMs, size = 'md' }) {
 function RaffleModal({ product, dropId, onClose }) {
   const { t } = useTranslation()
   const { user } = useAuth()
-  const { toast } = useToast()
+  const { success, error: toastError } = useToast()
   const [size, setSize] = useState(product.sizes?.[0] ?? '')
   const [loading, setLoading] = useState(false)
   const [entered, setEntered] = useState(false)
@@ -97,9 +97,9 @@ function RaffleModal({ product, dropId, onClose }) {
         if (error && error.code !== '23505') throw error // ignore duplicate
       }
       setEntered(true)
-      toast.success(t('drops.raffle_entered') ?? 'You\'re in the raffle!')
+      success(t('drops.raffle_entered') ?? 'You\'re in the raffle!')
     } catch (err) {
-      toast.error(err.message ?? t('common.error'))
+      toastError(err.message ?? t('common.error'))
     } finally {
       setLoading(false)
     }
@@ -221,7 +221,7 @@ function DropCard({ product, dropTime, dropId, units, unitsSold, index }) {
   const { t } = useTranslation()
   const { format } = useCurrency()
   const { addItem, openCart } = useCart()
-  const { toast } = useToast()
+  const { success } = useToast()
   const { live } = useCountdown(dropTime)
   const [raffleOpen, setRaffleOpen] = useState(false)
   const isLive      = !live
@@ -317,7 +317,7 @@ function DropCard({ product, dropTime, dropId, units, unitsSold, index }) {
                 <>
                   <button
                     type="button"
-                    onClick={() => { addItem(product, product.colors?.[0], product.sizes?.[0], 1); openCart(); toast.success(t('cart.added')) }}
+                    onClick={() => { addItem(product, product.colors?.[0], product.sizes?.[0], 1); openCart(); success(t('cart.added')) }}
                     className="flex-1 py-2.5 rounded-xl text-sm font-black text-white"
                     style={{ background: '#FF2D78' }}
                   >

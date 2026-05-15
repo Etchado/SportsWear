@@ -123,7 +123,7 @@ function CartReview({ coupon, setCoupon, couponInput, setCouponInput, redeemed, 
   const { items, removeItem, updateQty, subtotal } = useCart()
   const { format } = useCurrency()
   const { points, pointsToSAR } = useLoyalty()
-  const { toast } = useToast()
+  const { success, info } = useToast()
   const [couponError, setCouponError] = useState('')
 
   function applyCoupon() {
@@ -132,14 +132,14 @@ function CartReview({ coupon, setCoupon, couponInput, setCouponInput, redeemed, 
     if (!c) { setCouponError(t('checkout.invalid_coupon') ?? 'Invalid coupon code'); return }
     setCoupon({ code, ...c })
     setCouponError('')
-    toast.success(`${c.label} applied!`)
+    success(`${c.label} applied!`)
   }
 
   function togglePoints() {
     if (redeemed > 0) { setRedeemed(0); return }
-    const maxRedeem = Math.min(points, Math.floor(subtotal)) // can't redeem more than subtotal
+    const maxRedeem = Math.min(points, Math.floor(subtotal))
     setRedeemed(pointsToSAR(maxRedeem))
-    toast.info(`${maxRedeem} pts → ${format(pointsToSAR(maxRedeem))} discount applied`)
+    info(`${maxRedeem} pts → ${format(pointsToSAR(maxRedeem))} discount applied`)
   }
 
   if (items.length === 0) {
@@ -337,7 +337,7 @@ function PaymentStep({ shippingInfo, totals, coupon, redeemed, onBack, onSuccess
   const { items, clearCart } = useCart()
   const { user } = useAuth()
   const { addPoints, sarToPoints } = useLoyalty()
-  const { toast } = useToast()
+  const { error: toastError } = useToast()
   const { format } = useCurrency()
   const navigate = useNavigate()
 
@@ -412,9 +412,8 @@ function PaymentStep({ shippingInfo, totals, coupon, redeemed, onBack, onSuccess
       }
 
       clearCart()
-    } catch (err) {
-      toast.error(t('common.error'))
-      console.error(err)
+    } catch {
+      toastError(t('common.error'))
     } finally {
       setLoading(false)
     }

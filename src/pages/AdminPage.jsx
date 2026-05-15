@@ -125,7 +125,7 @@ function StatsTab() {
 // ─── Orders tab ───────────────────────────────────────────────────────────────
 function OrdersTab() {
   const { format } = useCurrency()
-  const { toast } = useToast()
+  const { success, error: toastError } = useToast()
   const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true)
   const [updating, setUpdating] = useState(null)
@@ -144,9 +144,9 @@ function OrdersTab() {
   async function updateStatus(orderId, status) {
     setUpdating(orderId)
     const { error } = await supabase.from('orders').update({ status }).eq('id', orderId)
-    if (error) { toast.error(error.message); setUpdating(null); return }
+    if (error) { toastError(error.message); setUpdating(null); return }
     setOrders(prev => prev.map(o => o.id === orderId ? { ...o, status } : o))
-    toast.success(`Order updated to ${status}`)
+    success(`Order updated to ${status}`)
     setUpdating(null)
   }
 
@@ -235,7 +235,7 @@ function OrdersTab() {
 
 // ─── Reviews tab ──────────────────────────────────────────────────────────────
 function ReviewsTab() {
-  const { toast } = useToast()
+  const { success, error: toastError } = useToast()
   const [reviews, setReviews] = useState([])
   const [loading, setLoading] = useState(true)
   const [deleting, setDeleting] = useState(null)
@@ -253,9 +253,9 @@ function ReviewsTab() {
     if (!confirm('Delete this review?')) return
     setDeleting(id)
     const { error } = await supabase.from('reviews').delete().eq('id', id)
-    if (error) { toast.error(error.message); setDeleting(null); return }
+    if (error) { toastError(error.message); setDeleting(null); return }
     setReviews(prev => prev.filter(r => r.id !== id))
-    toast.success('Review deleted')
+    success('Review deleted')
     setDeleting(null)
   }
 

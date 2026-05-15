@@ -43,7 +43,7 @@ function Dropdown({ label, items, accent = '#FF2D78' }) {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(v => !v)}
-        className="flex items-center gap-1 text-sm font-semibold text-light-text dark:text-dark-text hover:opacity-70 transition-opacity py-2"
+        className="flex items-center gap-1 text-base font-semibold text-light-text dark:text-dark-text hover:opacity-70 transition-opacity py-2"
       >
         {label}
         <svg className={cn('w-3.5 h-3.5 transition-transform', open && 'rotate-180')} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,7 +116,7 @@ function SearchOverlay({ onClose }) {
             className="flex-1 bg-transparent text-base font-medium text-light-text dark:text-dark-text placeholder:text-light-muted dark:placeholder:text-dark-muted outline-none"
           />
           <button type="button" onClick={onClose} className="p-1 rounded-lg hover:bg-light-surface dark:hover:bg-dark-bg transition-colors">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -230,7 +230,7 @@ export default function Navbar() {
         </div>
 
         {/* Main navbar */}
-        <div className="flex items-center justify-between px-4 md:px-6 h-16">
+        <div className="flex items-center justify-between px-4 md:px-8 h-20">
           {/* Mobile hamburger */}
           <button
             className="md:hidden p-2 rounded-xl hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
@@ -243,19 +243,19 @@ export default function Navbar() {
           </button>
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-1.5 font-black text-2xl tracking-tight">
+          <Link to="/" className="flex items-center gap-1.5 font-black text-3xl tracking-tight">
             <span className="text-light-text dark:text-dark-text">SPORTS</span>
             <span style={{ color: '#FF2D78' }}>WEAR</span>
           </Link>
 
           {/* Desktop nav links */}
-          <nav className="hidden md:flex items-center gap-6 ms-8">
+          <nav className="hidden md:flex items-center gap-8 ms-10">
             {NAV_LINKS.map(({ key, to }) => (
               <NavLink
                 key={key}
                 to={to}
                 className={({ isActive }) =>
-                  cn('text-sm font-semibold transition-colors hover:opacity-70',
+                  cn('text-base font-semibold transition-colors hover:opacity-70',
                     isActive ? 'text-[#FF2D78]' : 'text-light-text dark:text-dark-text')
                 }
               >
@@ -265,12 +265,12 @@ export default function Navbar() {
             <NavLink
               to="/drops"
               className={({ isActive }) =>
-                cn('text-sm font-semibold transition-colors',
+                cn('text-base font-semibold transition-colors',
                   isActive ? 'text-[#FF2D78]' : 'text-light-text dark:text-dark-text')
               }
               style={{ color: undefined }}
             >
-              <span className="flex items-center gap-1">
+              <span className="flex items-center gap-1.5">
                 {t('nav.drops')}
                 <span className="text-[10px] font-black px-1.5 py-0.5 rounded-full text-white" style={{ background: '#FF2D78' }}>LIVE</span>
               </span>
@@ -284,17 +284,17 @@ export default function Navbar() {
             {/* Search */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="p-2 rounded-xl hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
+              className="p-2.5 rounded-xl hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
               aria-label={t('nav.search')}
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
               </svg>
             </button>
 
             {/* Wishlist */}
             <Link to="/wishlist" className="relative p-2 rounded-xl hover:bg-light-surface dark:hover:bg-dark-surface transition-colors hidden sm:flex">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
               {wishCount > 0 && (
@@ -309,7 +309,7 @@ export default function Navbar() {
               to={user ? '/account' : '/account/login'}
               className="p-2 rounded-xl hover:bg-light-surface dark:hover:bg-dark-surface transition-colors hidden sm:flex"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </Link>
@@ -320,7 +320,7 @@ export default function Navbar() {
               className="relative p-2 rounded-xl hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
               aria-label={t('nav.cart')}
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
               </svg>
               <AnimatePresence>
@@ -364,7 +364,7 @@ export default function Navbar() {
                   <span>SPORTS</span><span style={{ color: '#FF2D78' }}>WEAR</span>
                 </Link>
                 <button onClick={() => setMobileOpen(false)} className="p-2 rounded-xl hover:bg-light-surface dark:hover:bg-dark-surface">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
@@ -434,7 +434,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Navbar height spacer */}
-      <div className="h-16 md:h-[calc(64px+33px)]" />
+      <div className="h-20 md:h-[calc(80px+33px)]" />
     </>
   )
 }

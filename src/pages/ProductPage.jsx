@@ -145,7 +145,7 @@ export default function ProductPage() {
   const { format } = useCurrency()
   const { sarToPoints } = useLoyalty()
   const { user } = useAuth()
-  const { toast } = useToast()
+  const { success, info } = useToast()
   const navigate = useNavigate()
 
   const [product, setProduct]   = useState(null)
@@ -191,7 +191,7 @@ export default function ProductPage() {
     addItem(product, selectedColor, selectedSize, qty)
     setAdded(true)
     openCart()
-    toast.success(t('cart.added'))
+    success(t('cart.added'))
     setTimeout(() => setAdded(false), 2500)
   }
 
@@ -199,7 +199,7 @@ export default function ProductPage() {
     e.preventDefault()
     if (!notifyEmail.trim()) return
     setNotifySent(true)
-    toast.success(t('product.notify_me_success'))
+    success(t('product.notify_me_success'))
   }
 
   if (loading) {
@@ -412,7 +412,7 @@ export default function ProductPage() {
             <button
               type="button"
               onClick={() => {
-                if (!user) { toast.info(t('auth.login_required')); return }
+                if (!user) { info(t('auth.login_required')); return }
                 toggle(product.id)
               }}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 text-sm font-black transition-colors ${
@@ -430,7 +430,7 @@ export default function ProductPage() {
             <button
               type="button"
               onClick={() => {
-                if (!comparing && isFull) { toast.info(t('compare.full')); return }
+                if (!comparing && isFull) { info(t('compare.full')); return }
                 toggleCompare(product)
               }}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 text-sm font-black transition-colors ${

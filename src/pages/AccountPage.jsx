@@ -319,7 +319,7 @@ const profileSchema = z.object({
 function ProfileTab({ user, profile }) {
   const { t } = useTranslation()
   const { updateProfile, signOut } = useAuth()
-  const { toast } = useToast()
+  const { success, error: toastError } = useToast()
   const navigate = useNavigate()
 
   const [name, setName]       = useState(profile?.display_name ?? '')
@@ -334,15 +334,15 @@ function ProfileTab({ user, profile }) {
     setSaving(true)
     try {
       await updateProfile({ display_name: name })
-      toast.success(t('account.profile_saved') ?? 'Profile saved')
-    } catch { toast.error(t('common.error')) }
+      success(t('account.profile_saved') ?? 'Profile saved')
+    } catch { toastError(t('common.error')) }
     finally { setSaving(false) }
   }
 
   async function handleSignOut() {
     setSigningOut(true)
     try { await signOut(); navigate('/') }
-    catch { toast.error(t('common.error')); setSigningOut(false) }
+    catch { toastError(t('common.error')); setSigningOut(false) }
   }
 
   return (
