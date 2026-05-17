@@ -4,16 +4,22 @@
       "Read(//c/Users/ikhal/.claude/projects/c--Users-ikhal-OneDrive-----------MyVScode/memory/**)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)",
-      "Bash(gh repo *)",
-      "PowerShell(gh repo create sportswear --public --source=\"c:\\\\Users\\\\ikhal\\\\OneDrive\\\\��ꫢ맟�\\\\MyVScode\\\\Projects\\\\SportsWear\" --remote=origin --push)",
-      "PowerShell(gh auth status)",
-      "Bash(npm run *)",
+      "Bash(git commit *)",
       "Bash(git push *)",
-      "Bash(npx vite *)"
+      "Bash(gh repo *)",
+      "Bash(npm run *)",
+      "Bash(npx vite *)",
+      "Bash(vercel --prod)",
+      "Bash(vercel --prod *)",
+      "Bash(vercel alias set *)",
+      "Bash(vercel alias *)",
+      "Bash(vercel env *)",
+      "Bash(vercel *)",
+      "PowerShell(gh repo create sportswear --public --source=\"c:\\\\Users\\\\ikhal\\\\OneDrive\\\\المستندات\\\\MyVScode\\\\Projects\\\\SportsWear\" --remote=origin --push)",
+      "PowerShell(gh auth status)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\ikhal\\OneDrive\\��ꫢ맟�\\MyVScode\\Projects\\SportsWear"
+      "c:\\Users\\ikhal\\OneDrive\\المستندات\\MyVScode\\Projects\\SportsWear"
     ]
   }
 }
