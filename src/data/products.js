@@ -170,8 +170,8 @@ export const PRODUCTS = [
     colors: ['Black', 'Legacy Purple', 'Halo Blue'],
     sizes: ['XS','S','M','L','XL'],
     images: [
-      'https://m.media-amazon.com/images/I/71p8t0ttxJL._AC_SR736,920_.jpg',
-      'https://m.media-amazon.com/images/I/71xASlGJ7KL._AC_SR736,920_.jpg',
+      'https://s3.amazonaws.com/syncpigeon/alti_prod/images/adi-ik7445__front-white.jpg',
+      'https://s3.amazonaws.com/syncpigeon/alti_prod/images/adi-ik7445__back-white.jpg',
     ],
     description: 'Lightweight running jacket that packs down into its own pocket.',
     long_description: 'Designed for outdoor running in unpredictable conditions. The Own the Run Jacket offers wind and light rain protection with a packable design.',
