@@ -5,4 +5,4 @@ Disallow: /admin
 Disallow: /account
 Disallow: /checkout
 
-Sitemap: https://sportswear-store-weld.vercel.app/sitemap.xml
+Sitemap: https://sportswear-st0re.vercel.app/sitemap.xml

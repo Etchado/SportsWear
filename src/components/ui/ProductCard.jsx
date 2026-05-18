@@ -2,11 +2,12 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
-import { useCart }     from '@/context/CartContext'
-import { useWishlist } from '@/context/WishlistContext'
-import { useCompare }  from '@/context/CompareContext'
-import { useCurrency } from '@/context/CurrencyContext'
-import { useToast }    from '@/context/ToastContext'
+import { useCart }       from '@/context/CartContext'
+import { useWishlist }   from '@/context/WishlistContext'
+import { useCompare }    from '@/context/CompareContext'
+import { useCurrency }   from '@/context/CurrencyContext'
+import { useToast }      from '@/context/ToastContext'
+import { useQuickView }  from '@/context/QuickViewContext'
 import { handleImgError } from '@/lib/imgFallback'
 import Badge from './Badge'
 
@@ -17,6 +18,7 @@ export default function ProductCard({ product }) {
   const { toggle: toggleCompare, isComparing, isFull } = useCompare()
   const { format }       = useCurrency()
   const { success, info } = useToast()
+  const { open: openQuickView } = useQuickView()
 
   const [activeColor, setActiveColor] = useState(0)
 
@@ -113,16 +115,29 @@ export default function ProductCard({ product }) {
             </button>
           </div>
 
-          {/* Quick add / Notify Me — appears on hover */}
+          {/* Quick add / Quick View / Notify Me — appears on hover */}
           <div className="absolute bottom-0 inset-x-0 translate-y-full group-hover:translate-y-0 transition-transform duration-200 z-20">
             {inStock ? (
-              <button
-                onClick={handleAddToCart}
-                className="w-full py-3 text-xs font-black text-white tracking-wider"
-                style={{ background: '#FF2D78' }}
-              >
-                + {t('product.add_to_cart').toUpperCase()}
-              </button>
+              <div className="flex">
+                <button
+                  onClick={handleAddToCart}
+                  className="flex-1 py-3 text-xs font-black text-white tracking-wider"
+                  style={{ background: '#FF2D78' }}
+                >
+                  + {t('product.add_to_cart').toUpperCase()}
+                </button>
+                <button
+                  onClick={e => { e.preventDefault(); openQuickView(product) }}
+                  className="px-3 py-3 text-xs font-black text-white border-s border-white/20"
+                  style={{ background: '#FF2D78' }}
+                  title="Quick View"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </button>
+              </div>
             ) : (
               <Link
                 to={`/product/${product.id}`}
