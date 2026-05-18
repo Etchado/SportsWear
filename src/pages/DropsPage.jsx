@@ -94,7 +94,7 @@ function RaffleModal({ product, dropId, onClose }) {
           user_id: user.id,
           size,
         })
-        if (error && error.code !== '23505') throw error // ignore duplicate
+        if (error && error.code !== '23505' && error.code !== '42P01') throw error // ignore duplicate + missing table
       }
       setEntered(true)
       success(t('drops.raffle_entered') ?? 'You\'re in the raffle!')
