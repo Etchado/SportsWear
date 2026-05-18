@@ -56,9 +56,10 @@ export default function ReviewsSection({ productId, rating = 0, reviewCount = 0,
     if (!body.trim() || newRating === 0) return
     setSubmitting(true)
     try {
+      const userName = user.user_metadata?.full_name || user.email?.split('@')[0] || 'User'
       const { data, error } = await supabase
         .from('reviews')
-        .insert({ product_id: productId, user_id: user.id, rating: newRating, body: body.trim() })
+        .insert({ product_id: productId, user_id: user.id, user_name: userName, rating: newRating, body: body.trim() })
         .select()
         .single()
       if (error) throw error
@@ -172,11 +173,11 @@ export default function ReviewsSection({ productId, rating = 0, reviewCount = 0,
                   className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black"
                   style={{ background: '#FF2D78' }}
                 >
-                  {(review.reviewer_name ?? 'U')[0].toUpperCase()}
+                  {(review.user_name ?? 'U')[0].toUpperCase()}
                 </div>
                 <div>
                   <p className="text-sm font-black text-light-text dark:text-dark-text">
-                    {review.reviewer_name ?? t('product.anonymous')}
+                    {review.user_name ?? t('product.anonymous')}
                   </p>
                   <p className="text-[10px] text-light-muted dark:text-dark-muted">
                     {new Date(review.created_at).toLocaleDateString()}
