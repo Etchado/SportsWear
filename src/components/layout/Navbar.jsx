@@ -243,7 +243,7 @@ export default function Navbar() {
           </button>
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-1.5 font-black text-3xl tracking-tight">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-1.5 font-black text-3xl tracking-tight">
             <span className="text-light-text dark:text-dark-text">SPORTS</span>
             <span style={{ color: '#FF2D78' }}>WEAR</span>
           </Link>
