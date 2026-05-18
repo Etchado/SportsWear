@@ -13,6 +13,7 @@ import { useToast } from '@/context/ToastContext'
 import { usePageTitle } from '@/hooks/usePageTitle'
 import { useRecentlyViewed } from '@/hooks/useRecentlyViewed'
 import { handleImgError } from '@/lib/imgFallback'
+import { supabase } from '@/lib/supabase'
 import Badge from '@/components/ui/Badge'
 import ReviewsSection from '@/components/sections/ReviewsSection'
 import RelatedProducts from '@/components/sections/RelatedProducts'
@@ -198,9 +199,10 @@ export default function ProductPage() {
     setTimeout(() => setAdded(false), 2500)
   }
 
-  function handleNotifyMe(e) {
+  async function handleNotifyMe(e) {
     e.preventDefault()
     if (!notifyEmail.trim()) return
+    await supabase.from('stock_notifications').insert({ product_id: product.id, email: notifyEmail.trim() })
     setNotifySent(true)
     success(t('product.notify_me_success'))
   }

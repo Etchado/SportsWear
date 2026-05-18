@@ -25,9 +25,8 @@ values
   ARRAY['Black','White','Volt Green'],
   ARRAY['EU40','EU41','EU42','EU43','EU44','EU45'],
   ARRAY[
-    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/433fd54b-a5b1-4323-9371-e420cbe1d523.jpeg',
+    'https://n.nordstrommedia.com/it/7303b0a0-e3d4-4b83-80ad-23136410ffcc.jpeg'
   ],
   'The trusted daily trainer, now lighter and more responsive than ever.',
   'The Nike Air Zoom Pegasus 41 keeps what runners love about the Peg — a secure, snappy ride — and makes it even better. The updated React foam midsole and forefoot Zoom Air unit deliver a cushioned yet energetic feel on every run.',
@@ -44,8 +43,8 @@ values
   ARRAY['Black','White','Smoke Grey'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/cfac776a-887c-499a-9e26-199159e45924.jpeg',
+    'https://n.nordstrommedia.com/it/f2bab579-edb3-428a-8963-4fc9ed01b587.jpeg'
   ],
   'Sweat-wicking training top engineered for high-intensity workouts.',
   'Nike Dri-FIT ADV technology wicks sweat and moves it to the fabric surface for faster evaporation. The knit fabric is strategically ventilated to keep you cool under pressure.',
@@ -62,8 +61,8 @@ values
   ARRAY['Black','Plum','Navy'],
   ARRAY['XS','S','M','L','XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/6fdff98d-3839-47d5-ab2b-d8ff9a6bf6a5.jpeg',
+    'https://n.nordstrommedia.com/it/b1f9afe5-6b92-4ebf-8654-57ed76bcf871.jpeg'
   ],
   'Second-skin tights designed for yoga, pilates, and studio training.',
   'The Nike Pro Women''s 7/8 Tights feel like a second skin, thanks to the soft, stretchy fabric that moves with you in every direction. The high waistband provides coverage and support through every pose.',
@@ -71,7 +70,7 @@ values
   4.8, 241, 'BESTSELLER', false, true
 ),
 
--- 4  Nike Air Max 90  ─  Casual / Unisex / Shoes
+-- 4  Nike Air Max 90  ─  Casual / Unisex / Shoes  (OUT OF STOCK)
 (
   '00000000-0000-0000-0000-000000000004',
   'Nike Air Max 90',
@@ -80,16 +79,16 @@ values
   ARRAY['White/Grey','Triple Black','University Red'],
   ARRAY['EU36','EU37','EU38','EU39','EU40','EU41','EU42','EU43','EU44','EU45'],
   ARRAY[
-    'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/4e8acf8b-5186-4467-b0e7-873d995cd9f6.jpeg',
+    'https://n.nordstrommedia.com/it/448b2586-7c6e-456e-98a1-d84a13670572.jpeg'
   ],
   'The icon that defined an era. Still turning heads after 30+ years.',
   'The Nike Air Max 90 stays true to its OG running roots with the classic Waffle outsole, stitched overlays and iconic Max Air cushioning. The result: pure, timeless icon status.',
   '{"cushioning":"Max Air","outsole":"Waffle","upper":"Leather/mesh"}',
-  4.6, 534, null, false, true
+  4.6, 534, null, false, false
 ),
 
--- 5  Nike Strike Football Jersey  ─  Football / Men / Tops
+-- 5  Nike Strike Football Jersey  ─  Football / Men / Tops  (OUT OF STOCK)
 (
   '00000000-0000-0000-0000-000000000005',
   'Nike Strike Dri-FIT Football Jersey',
@@ -98,13 +97,13 @@ values
   ARRAY['Royal Blue','Red','Black'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/daaf08fa-c0fb-4dfb-8ec3-f140196e5de9.jpeg',
+    'https://n.nordstrommedia.com/it/2b3dc526-a025-410d-a570-bb536b3abfbb.jpeg'
   ],
   'Match-ready football jersey with Dri-FIT sweat management.',
   'The Nike Strike Jersey is designed for the pitch. Dri-FIT technology keeps you dry as you attack, while the stretchy fabric gives you full range of motion when you go for goal.',
   '{"fabric":"100% Polyester","technology":"Dri-FIT","fit":"Standard"}',
-  4.3, 97, 'SALE', false, true
+  4.3, 97, 'SALE', false, false
 ),
 
 -- 6  Nike Revolution 7 Kids  ─  Running / Kids / Shoes
@@ -116,8 +115,8 @@ values
   ARRAY['Pink','Blue','Black/White'],
   ARRAY['EU28','EU29','EU30','EU31','EU32','EU33','EU34','EU35'],
   ARRAY[
-    'https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/0ea1321b-5573-4d2e-bb05-15688745c538.jpeg',
+    'https://n.nordstrommedia.com/it/2f5e6254-438c-48ba-b6ef-6c4e95b241d5.jpeg'
   ],
   'Lightweight everyday sneaker built for active kids.',
   'The Nike Revolution 7 features a soft foam midsole that cushions every step while the slip-on design makes it easy for young athletes to get going fast.',
@@ -134,8 +133,8 @@ values
   ARRAY['Black','Dark Grey','Army Green'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1556821840-3a63f15232d0?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/a99e03b1-1060-4ca9-aaef-a95a6bed5cda.jpeg',
+    'https://n.nordstrommedia.com/it/3ccd9c3a-becd-4b11-a882-baedfd5ecbba.jpeg'
   ],
   'Therma-FIT insulation keeps you warm during outdoor training sessions.',
   'The Nike Therma-FIT Victory Jacket uses synthetic insulation to lock in warmth without weighing you down. A zip-up front and adjustable hem lets you dial in your coverage as conditions change.',
@@ -156,8 +155,8 @@ values
   ARRAY['Core Black','Cloud White','Solar Red'],
   ARRAY['EU40','EU41','EU42','EU43','EU44','EU45','EU46'],
   ARRAY[
-    'https://images.unsplash.com/photo-1556906781-9d8a3276e6f0?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/71L8XZuURJL._AC_SR768,1024_.jpg',
+    'https://m.media-amazon.com/images/I/71zNP8KPx-L._AC_SR768,1024_.jpg'
   ],
   'The iconic energy-return running shoe, reimagined for 2024.',
   'Experience an extraordinary energy return with every stride. The Ultraboost 24 features a BOOST midsole with 20% more cushioning than before, wrapped in an adaptive Primeknit+ upper.',
@@ -174,8 +173,8 @@ values
   ARRAY['Team Royal Blue','Black','Team Red'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/71n7nCmpkQL._AC_SR768,1024_.jpg',
+    'https://m.media-amazon.com/images/I/719SACT-CAL._AC_SR768,1024_.jpg'
   ],
   'Match-ready performance jersey built for the beautiful game.',
   'Designed for competition, the Tiro 24 jersey uses AEROREADY technology to absorb moisture and keep you feeling fresh. The slim fit and ventilation panels keep you cool under pressure.',
@@ -183,7 +182,7 @@ values
   4.4, 143, null, false, true
 ),
 
--- 10  Adidas Adizero Shorts  ─  Running / Men / Bottoms
+-- 10  Adidas Adizero Shorts  ─  Running / Men / Bottoms  (OUT OF STOCK)
 (
   '00000000-0000-0000-0000-000000000010',
   'Adidas Adizero Running Shorts',
@@ -192,16 +191,16 @@ values
   ARRAY['Black','White','Vivid Red'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1539600830741-7dbaea5ccf3d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/61iArnuVcTL._AC_SR736,920_.jpg',
+    'https://m.media-amazon.com/images/I/611LoX89f5L._AC_SR736,920_.jpg'
   ],
   'Ultra-light race shorts designed to help you go faster.',
   'The Adidas Adizero Shorts are built for speed. Made from lightweight, moisture-wicking fabric with a split hem design for unrestricted movement on every run.',
   '{"weight":"65g","fabric":"100% Polyester","liner":"Built-in brief","length":"4 inch"}',
-  4.3, 89, 'SALE', false, true
+  4.3, 89, 'SALE', false, false
 ),
 
--- 11  Adidas Women''s Own the Run Jacket  ─  Running / Women / Jackets
+-- 11  Adidas Women's Own the Run Jacket  ─  Running / Women / Jackets  (OUT OF STOCK)
 (
   '00000000-0000-0000-0000-000000000011',
   'Adidas Women''s Own the Run Jacket',
@@ -210,13 +209,13 @@ values
   ARRAY['Black','Legacy Purple','Halo Blue'],
   ARRAY['XS','S','M','L','XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1556821840-3a63f15232d0?w=800&auto=format&fit=crop'
+    'https://s3.amazonaws.com/syncpigeon/alti_prod/images/adi-ik7445__front-white.jpg',
+    'https://s3.amazonaws.com/syncpigeon/alti_prod/images/adi-ik7445__back-white.jpg'
   ],
   'Lightweight running jacket that packs down into its own pocket.',
   'Designed for outdoor running in unpredictable conditions. The Own the Run Jacket offers wind and light rain protection with a packable design that fits in your palm.',
   '{"packable":true,"wind_resistant":true,"fabric":"100% Recycled Polyester","reflective_details":true}',
-  4.6, 112, 'NEW', false, true
+  4.6, 112, 'NEW', false, false
 ),
 
 -- 12  Adidas Stan Smith  ─  Casual / Unisex / Shoes
@@ -228,8 +227,8 @@ values
   ARRAY['Cloud White/Green','Cloud White/Navy','Core Black'],
   ARRAY['EU36','EU37','EU38','EU39','EU40','EU41','EU42','EU43','EU44','EU45'],
   ARRAY[
-    'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/8a52b40f-ad07-4ed5-8f52-aa4de32b4ea0.jpeg',
+    'https://n.nordstrommedia.com/it/e9fdb5fa-cde4-4aa7-9894-926fd8b284a3.jpeg'
   ],
   'The most iconic tennis shoe ever made, elevated with premium materials.',
   'The Stan Smith has been an icon since its debut in the 70s. This Lux version features premium leather and a refined finish while maintaining the clean, minimal silhouette that made it famous.',
@@ -246,8 +245,8 @@ values
   ARRAY['Black/White','Solar Red/Black'],
   ARRAY['EU28','EU29','EU30','EU31','EU32','EU33','EU34','EU35'],
   ARRAY[
-    'https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&auto=format&fit=crop'
+    'https://soccerzone.shop/cdn/shop/files/IF6424_01_standard_hover_300x300.jpg?v=1727471781',
+    'https://soccerzone.shop/cdn/shop/files/IF6424_22_model_300x300.jpg?v=1727471755'
   ],
   'Entry-level Predator boots for young players who love control.',
   'Designed for developing players, the Predator 24 Club provides the grip and control kids need to take their game to the next level on firm and artificial ground.',
@@ -264,8 +263,8 @@ values
   ARRAY['Black','Magic Mauve','Halo Ivory'],
   ARRAY['XS','S','M','L','XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/08772718-89c8-4c17-8048-4d7925c76d95.jpeg',
+    'https://n.nordstrommedia.com/it/5fabf78b-edf4-43f7-ae1e-457fafc8d469.jpeg'
   ],
   'Soft studio leggings with a wide waistband and flared hem.',
   'These yoga flare leggings are made from soft, 4-way stretch fabric that moves with you in every pose. The wide waistband stays put, and the flared hem gives a stylish studio look.',
@@ -286,8 +285,8 @@ values
   ARRAY['Black/Gold','White/Blue','Lime Squeeze'],
   ARRAY['EU40','EU41','EU42','EU43','EU44','EU45'],
   ARRAY[
-    'https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1556906781-9d8a3276e6f0?w=800&auto=format&fit=crop'
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/377748/01/sv01/fnd/PNA/fmt/png/Velocity-NITRO-3-Mens-Running-Shoes',
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/377748/01/fnd/PNA/fmt/png/Velocity-NITRO-3-Mens-Running-Shoes'
   ],
   'High-energy daily trainer with NITRO foam for a springy ride.',
   'The Velocity Nitro 3 uses PUMA''s lightest and most responsive NITRO foam to deliver a snappy, energetic ride for daily training runs and tempo workouts.',
@@ -304,8 +303,8 @@ values
   ARRAY['Black','Dark Navy','Concrete Grey'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1556821840-3a63f15232d0?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&auto=format&fit=crop'
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/523859/87/mod01/fnd/PNA/fmt/png/PUMA-FIT-Full-Zip-Woven-Mens-Training-Jacket',
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/523859/87/fnd/PNA/fmt/png/PUMA-FIT-Full-Zip-Woven-Mens-Training-Jacket'
   ],
   'Woven training jacket with dryCELL moisture management.',
   'The Puma Fit Woven Jacket features dryCELL technology to keep you dry and focused during intense gym sessions. The lightweight woven fabric provides wind protection without bulk.',
@@ -322,8 +321,8 @@ values
   ARRAY['Black','Wild Willow','Electric Orchid'],
   ARRAY['XS','S','M','L','XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop'
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/522227/01/fnd/PNA/fmt/png/Studio-Strappy-Womens-Low-Impact-Sports-Bra',
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/522227/01/bv/fnd/PNA/fmt/png/Studio-Strappy-Womens-Low-Impact-Sports-Bra'
   ],
   'Low-impact studio bra with soft support for yoga and pilates.',
   'Designed for low-impact activities like yoga and pilates, this bra provides soft support with removable cups and a cross-back design for a secure, comfortable fit.',
@@ -340,8 +339,8 @@ values
   ARRAY['Yellow/Black','Blue/White','Black/Gold'],
   ARRAY['EU40','EU41','EU42','EU43','EU44','EU45'],
   ARRAY[
-    'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&auto=format&fit=crop'
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/107924/03/sv01/fnd/PNA/fmt/png/FUTURE-7-PRO-Firm-Ground-Artificial-Ground-Mens-Soccer-Cleats',
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/107924/03/fnd/PNA/fmt/png/FUTURE-7-PRO-Firm-Ground-Artificial-Ground-Mens-Soccer-Cleats'
   ],
   'Elite football boots with adaptive FUZIONFIT+ compression bandage.',
   'The Future 7 Pro features the FUZIONFIT+ compression bandage for an adaptive, sock-like fit. The grippy MG outsole provides traction across firm and artificial ground.',
@@ -358,8 +357,8 @@ values
   ARRAY['Black','Puma White','Club Red'],
   ARRAY['XS','S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&auto=format&fit=crop'
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/586682/01/mod01/fnd/PNA/fmt/png/PUMA-Essentials-Mens-Sweatshirt',
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/586682/01/fnd/PNA/fmt/png/PUMA-Essentials-Mens-Sweatshirt'
   ],
   'Classic fleece sweatshirt with Puma tape branding detail.',
   'A wardrobe staple with a sporty edge. The Essentials+ Tape Sweatshirt is made from soft fleece fabric with a regular fit and the signature Puma tape running down the sleeve.',
@@ -376,8 +375,8 @@ values
   ARRAY['Black','Navy','Lime Squeeze'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1539600830741-7dbaea5ccf3d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&auto=format&fit=crop'
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/586728/06/mod01/fnd/PNA/fmt/png/Active-Woven-5in-Mens-Shorts',
+    'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/586728/06/fnd/PNA/fmt/png/Active-Woven-5in-Mens-Shorts'
   ],
   'Lightweight woven gym shorts with dryCELL moisture management.',
   'Built for intense gym sessions, these woven training shorts feature dryCELL technology to wick moisture away from your skin. An internal brief and side pockets add function.',
@@ -398,8 +397,8 @@ values
   ARRAY['Black','White/Red','Midnight Navy'],
   ARRAY['EU40','EU41','EU42','EU43','EU44','EU45'],
   ARRAY[
-    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/71GAW73vF-L._AC_SR768,1024_.jpg',
+    'https://m.media-amazon.com/images/I/71GFgt1BL-L._AC_SR768,1024_.jpg'
   ],
   'Connected running shoe that tracks your metrics with every stride.',
   'UA HOVR technology provides a "zero gravity feel" to maintain energy return. The connected sensor tracks your running form and cadence, syncing with the MapMyRun app for real-time coaching.',
@@ -416,8 +415,8 @@ values
   ARRAY['Black','White','Red'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/8265a088-9fc4-4918-85dc-c6d9d0f94819.jpeg',
+    'https://n.nordstrommedia.com/it/88ea803e-9b38-456e-b3d4-46d4725ab7db.jpeg'
   ],
   'Ultra-tight compression shirt that keeps you cool and supported.',
   'HeatGear fabric is ultra-light and works to wick sweat and dry fast, while the 4-way stretch construction moves with you. The anti-odor technology prevents the growth of odor-causing microbes.',
@@ -425,7 +424,7 @@ values
   4.5, 319, null, false, true
 ),
 
--- 23  UA Women''s Rush SmartForm Bra  ─  Gym / Women / Accessories  (DROP)
+-- 23  UA Women's Rush SmartForm Bra  ─  Gym / Women / Accessories  (DROP)
 (
   '00000000-0000-0000-0000-000000000023',
   'Under Armour Women''s Rush SmartForm Bra',
@@ -434,8 +433,8 @@ values
   ARRAY['Black','Pink Quartz','Midnight Navy'],
   ARRAY['XS','S','M','L','XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop'
+    'https://cdn11.bigcommerce.com/s-21x65e8kfn/images/stencil/original/products/39159/162463/UND7849_1000_1__74637.1688394747.jpg',
+    'https://cdn11.bigcommerce.com/s-21x65e8kfn/images/stencil/original/products/39159/162464/UND7849_1000_2__95835.1688394748.jpg'
   ],
   'High-impact sports bra with UA Rush technology for energy return.',
   'UA RUSH fabric is embedded with minerals that absorb the energy your body naturally emits and reflect it back to your muscles for enhanced performance. This high-support bra is designed for high-intensity workouts.',
@@ -452,8 +451,8 @@ values
   ARRAY['Halo Grey','Pink Elixir','Black'],
   ARRAY['EU36','EU37','EU38','EU39','EU40','EU41'],
   ARRAY[
-    'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/61O5r2CYKzL._AC_SR768,1024_.jpg',
+    'https://m.media-amazon.com/images/I/61ZTZacxNJL._AC_SR768,1024_.jpg'
   ],
   'Women''s performance runner with UA FLOW cushioning.',
   'The Phantom 3 SE features a UA FLOW midsole that provides a lightweight, responsive feel with every step. The wider fit and breathable upper make it ideal for longer runs.',
@@ -470,8 +469,8 @@ values
   ARRAY['Black','Pitch Grey','Academy Blue'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1556821840-3a63f15232d0?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/71xASlGJ7KL._AC_SR736,920_.jpg',
+    'https://m.media-amazon.com/images/I/71p8t0ttxJL._AC_SR736,920_.jpg'
   ],
   'Water-resistant fleece hoodie built for outdoor training.',
   'UA Storm technology repels water without sacrificing breathability. The brushed fleece interior traps heat while the exterior handles whatever the weather throws at you.',
@@ -488,8 +487,8 @@ values
   ARRAY['Black','White','Neon Coral'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1539600830741-7dbaea5ccf3d?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/61IC5qey95L._AC_SR736,920_.jpg',
+    'https://m.media-amazon.com/images/I/61s3A3BYh7L._AC_SR736,920_.jpg'
   ],
   'Ultra-light run shorts with HeatGear fabric for race-day performance.',
   'These are the shorts elite runners choose on race day. Ultralight HeatGear fabric wicks and dries fast, while the split hem and built-in brief provide freedom of movement.',
@@ -510,8 +509,8 @@ values
   ARRAY['Black/Phantom','White/Bright Lapis','Neon Dragonfly'],
   ARRAY['EU40','EU41','EU42','EU43','EU44','EU45','EU46'],
   ARRAY[
-    'https://images.unsplash.com/photo-1556906781-9d8a3276e6f0?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/2c6d4a9a-82b9-4d16-ade0-7febc913f4a2.jpeg',
+    'https://n.nordstrommedia.com/it/eb66cab6-5e49-45bb-9fef-94385e31755b.jpeg'
   ],
   'The pinnacle of New Balance cushioning, now in its 13th edition.',
   'The Fresh Foam X 1080v13 is the ultimate long-run shoe. The updated Fresh Foam X midsole is softer and more cushioned than ever, while the redesigned Hypoknit upper provides targeted support and breathability.',
@@ -528,8 +527,8 @@ values
   ARRAY['Black','Sea Salt','Natural Indigo'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/71sZQTqKX9L._AC_SR736,920_.jpg',
+    'https://n.nordstrommedia.com/it/9ef72d08-a161-44be-bcb4-733281cde49e.jpeg'
   ],
   'Relaxed French terry sweatshirt with classic NB branding.',
   'Made from a heavyweight French terry blend, this Athletics sweatshirt delivers the comfort of a classic with the quality you expect from New Balance. A relaxed fit makes it ideal for off-court style.',
@@ -537,7 +536,7 @@ values
   4.4, 167, null, false, true
 ),
 
--- 29  NB Women''s Impact Run Tight  ─  Running / Women / Bottoms
+-- 29  NB Women's Impact Run Tight  ─  Running / Women / Bottoms
 (
   '00000000-0000-0000-0000-000000000029',
   'New Balance Women''s Impact Run Crop Tight',
@@ -546,8 +545,8 @@ values
   ARRAY['Black','Eclipse','Vibrant Orange Glo'],
   ARRAY['XS','S','M','L','XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/c6b91149-e38c-4d24-bc0d-bbc3b6182771.jpeg',
+    'https://n.nordstrommedia.com/it/6caf28b7-4186-4daa-ab52-02240689634b.jpeg'
   ],
   'Performance crop tights built for fast training runs.',
   'The Impact Run Crop Tights feature a high waist design and NB DRY moisture management fabric to keep you comfortable mile after mile. Reflective details ensure visibility in low light.',
@@ -564,8 +563,8 @@ values
   ARRAY['Grey/Navy','White/Pink','Black/Orange'],
   ARRAY['EU28','EU29','EU30','EU31','EU32','EU33','EU34','EU35'],
   ARRAY[
-    'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=800&auto=format&fit=crop'
+    'https://n.nordstrommedia.com/it/0ea1321b-5573-4d2e-bb05-15688745c538.jpeg',
+    'https://n.nordstrommedia.com/it/2f5e6254-438c-48ba-b6ef-6c4e95b241d5.jpeg'
   ],
   'The iconic 574 silhouette scaled down for young trendsetters.',
   'Kids deserve iconic sneakers too. The 574 Classic Kids brings the legendary NB silhouette to smaller feet with the same ENCAP midsole for all-day comfort whether at school or play.',
@@ -582,8 +581,8 @@ values
   ARRAY['Neon Dragonfly/Black','White/Blue'],
   ARRAY['EU36','EU37','EU38','EU39','EU40','EU41','EU42','EU43','EU44','EU45'],
   ARRAY[
-    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop'
+    'https://img.runningwarehouse.com/watermark/rs.php?path=N4SCEM2-1.jpg&nw=455',
+    'https://m.media-amazon.com/images/I/71yV63VHdnL._AC_SR920,736_.jpg'
   ],
   'Carbon-plated race shoe engineered for marathon personal bests.',
   'The FuelCell SuperComp Elite v4 is NB''s fastest shoe ever. A full-length carbon fiber plate and updated FuelCell foam midsole deliver explosive energy return for race day.',
@@ -600,8 +599,8 @@ values
   ARRAY['Black','Asphalt','Wheat'],
   ARRAY['S','M','L','XL','2XL'],
   ARRAY[
-    'https://images.unsplash.com/photo-1539600830741-7dbaea5ccf3d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&auto=format&fit=crop'
+    'https://m.media-amazon.com/images/I/61sUtfSWRPL._AC_SR768,1024_.jpg',
+    'https://m.media-amazon.com/images/I/711dpgngJXL._AC_SR768,1024_.jpg'
   ],
   'French terry shorts for effortless off-duty style.',
   'These relaxed shorts are made from a soft French terry blend that''s comfortable enough for the couch but stylish enough for the street. An elastic waistband with drawcord and side pockets complete the look.',
@@ -614,7 +613,6 @@ on conflict (id) do nothing;
 
 -- ────────────────────────────────────────────────────────────
 -- PRODUCT VARIANTS  (auto-generate from products.colors × sizes)
--- Each color/size combo gets a random stock of 1–20 units.
 -- ────────────────────────────────────────────────────────────
 do $$
 declare
@@ -634,11 +632,9 @@ begin
 end;
 $$;
 
--- Mark a few specific sizes as sold out to make size selectors realistic
 update product_variants set stock_count = 0
 where product_id = '00000000-0000-0000-0000-000000000001'
-  and size = 'EU44'
-  and color = 'Black';
+  and size = 'EU44' and color = 'Black';
 
 update product_variants set stock_count = 2
 where product_id = '00000000-0000-0000-0000-000000000008'
@@ -646,8 +642,7 @@ where product_id = '00000000-0000-0000-0000-000000000008'
 
 update product_variants set stock_count = 0
 where product_id = '00000000-0000-0000-0000-000000000031'
-  and size in ('EU40','EU41')
-  and color = 'White/Blue';
+  and size in ('EU40','EU41') and color = 'White/Blue';
 
 
 -- ────────────────────────────────────────────────────────────
@@ -655,64 +650,34 @@ where product_id = '00000000-0000-0000-0000-000000000031'
 -- ────────────────────────────────────────────────────────────
 insert into drops (id, product_id, drop_time, units_total, units_sold, is_active)
 values
-
--- Drop 1: Nike Therma-FIT jacket (already live)
 (
   'dd000000-0000-0000-0000-000000000001',
   '00000000-0000-0000-0000-000000000007',
   now() - interval '2 hours',
   150, 87, true
 ),
-
--- Drop 2: Puma Future 7 Pro (coming soon — 3 days from now)
 (
   'dd000000-0000-0000-0000-000000000002',
   '00000000-0000-0000-0000-000000000018',
   now() + interval '3 days',
   200, 0, false
 ),
-
--- Drop 3: UA Rush SmartForm Bra (coming soon — 1 day from now)
 (
   'dd000000-0000-0000-0000-000000000003',
   '00000000-0000-0000-0000-000000000023',
   now() + interval '1 day 6 hours',
   300, 0, false
 ),
-
--- Drop 4: NB Fresh Foam X 1080v13 (live — limited units)
 (
   'dd000000-0000-0000-0000-000000000004',
   '00000000-0000-0000-0000-000000000027',
   now() - interval '30 minutes',
   100, 62, true
 ),
-
--- Drop 5: NB FuelCell SuperComp Elite (coming soon — 7 days)
 (
   'dd000000-0000-0000-0000-000000000005',
   '00000000-0000-0000-0000-000000000031',
   now() + interval '7 days',
   50, 0, false
 )
-
 on conflict (id) do nothing;
-
-
--- ────────────────────────────────────────────────────────────
--- SAMPLE REVIEWS  (a few to seed ratings)
--- Note: uses a placeholder user_id. In production these come
--- from real authenticated users.
--- ────────────────────────────────────────────────────────────
--- (Reviews are skipped in seed — they require real auth.users rows.
---  Add them manually via the app or Supabase Table Editor.)
-
-
--- ────────────────────────────────────────────────────────────
--- COUPON CODES  (validated client-side in CheckoutContext)
--- ────────────────────────────────────────────────────────────
--- SPORT10   → 10% off
--- SAVE50    → 50 SAR flat
--- FREESHIP  → free shipping
--- NEWUSER20 → 20% off
--- VOLT30    → 30% off sale items
