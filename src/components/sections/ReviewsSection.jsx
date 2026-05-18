@@ -70,7 +70,7 @@ export default function ReviewsSection({ productId, rating = 0, reviewCount = 0,
       success(t('product.review_submitted'))
     } catch (err) {
       console.error('Review submit error:', err)
-      toastError(err?.message || t('common.error'))
+      toastError(err?.code ? `[${err.code}] ${err.message}` : (err?.message || t('common.error')))
     } finally {
       setSubmitting(false)
     }
