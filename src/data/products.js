@@ -531,7 +531,7 @@ export const COUPONS = {
 
 export const BRAND_META = {
   Nike:          { color: '#FF2D78', tagline: 'Just Do It', logo: 'NIKE' },
-  Adidas:        { color: '#0066FF', tagline: 'Impossible is Nothing', logo: 'adidas' },
+  Adidas:        { color: '#0066FF', tagline: 'Impossible is Nothing', logo: 'Adidas' },
   Puma:          { color: '#CCFF00', tagline: 'Forever Faster', logo: 'PUMA' },
   'Under Armour':{ color: '#0066FF', tagline: 'The Only Way Is Through', logo: 'UA' },
   'New Balance': { color: '#FF2D78', tagline: 'Fearlessly Independent', logo: 'NB' },
