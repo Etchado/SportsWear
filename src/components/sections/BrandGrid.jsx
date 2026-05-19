@@ -5,9 +5,9 @@ import { BRAND_META } from '@/data/products'
 
 const BRAND_IMAGES = {
   Nike:          'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop',
-  Adidas:        'https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?w=600&auto=format&fit=crop',
+  Adidas:        '/brands/adidas.jpg',
   Puma:          'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop',
-  'Under Armour':'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop',
+  'Under Armour':'/brands/ua.jpg',
   'New Balance': 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&auto=format&fit=crop',
 }
 
